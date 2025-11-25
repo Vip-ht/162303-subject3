@@ -1,48 +1,45 @@
-# ==========================
-# TeX auxiliary and intermediate files
-# ==========================
 *.aux
-*.bbl
-*.blg
-*.fdb_latexmk
-*.fls
 *.log
 *.out
 *.toc
-*.lof
-*.lot
-*.lol
+*.fls
+*.fdb_latexmk
 *.synctex.gz
 *.synctex(busy)
+*.dvi
+*.xdv
 *.nav
 *.snm
 *.vrb
-*.dvi
-*.xdv
+
+*.bbl
+*.blg
 *.bcf
 *.run.xml
+*.idx
+*.ind
+*.ilg
+*.lof
+*.lot
+*.lol
+*.loa
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+*.ist
 
-# ==========================
-# PDF output (optional)
-# ==========================
-# Nếu bạn muốn mỗi thành viên tự biên dịch PDF riêng thì bật dòng này:
-# *.pdf
-
-# ==========================
-# VS Code / Editor junk
-# ==========================
 .vscode/
 *.code-workspace
 
-# ==========================
-# OS generated files
-# ==========================
 .DS_Store
 Thumbs.db
 desktop.ini
 
-# ==========================
-# Temporary folders
-# ==========================
 latex.out/
 build/
+_minted-*/
+
+*.pdf
