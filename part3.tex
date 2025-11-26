@@ -129,7 +129,60 @@ Tiêu  chí  đánh  giá  cho  mỗi  framework  được  chia  thành  bốn 
  Dữ  liệu  thu  thập  được  thông  qua  các đo đạc  hiệu  suất,  khảo  sát  nhà  phát  triển  và đánh giá từ cộng  đồng
   có  thể  được  phân  tích  bằng  cả  thống  kê  mô  tả  và  phân  tích  chuyên  đề.
 \begin{itemize}
-  \item 
+  \item So  sánh  được  thực  hiện  bằng  cách  sử  dụng  số  liệu  hiệu  suất,  thời  gian  xây  dựng  và  độ  phức  tạp  của  mã nguồn.
+  \item Ý  nghĩa  thống  kê  có  thể  được  đánh  giá  để  đảm  bảo  rằng  sự  khác  biệt  quan  sát  được  giữa
+ các framework có  ý  nghĩa.
+  \item   Phân  tích  theo  chủ  đề  xác  định  các  chủ  đề  và  mô  hình  lặp  lại  trong  các  phản  hồi  khảo  sát.  Điều  này
+ giúp  giải  thích  cảm  nhận  của  các  nhà  phát  triển  về  ưu  điểm  và  nhược  điểm  của  từng framework.
 \end{itemize}
+\paragraph{}
+ Phân  tích  dữ  liệu  cho  nghiên  cứu  này  đảm  bảo  đánh  giá  toàn  diện  React  Native,  Kotlin  (thông  qua
+ Kotlin  Đa  nền  tảng  Di  động)  và  Flutter.  Sự  tam  giác  hóa  xảy  ra  giữa  các  kết  quả  từ
+ các  nguồn  dữ  liệu  khác  nhau  khi  sử  dụng  phương  pháp  tiếp  cận  hỗn  hợp  này  để  cải  thiện  mức độ hiểu rõ  hơn
+  điểm  mạnh  và  điểm  yếu  của  từng  framework.  Và  trong  cấu  trúc  của
+ phân  tích,  dữ  liệu  thu  thập  được  của  các  giai  đoạn  trước  của  nghiên  cứu,  các  bài đo hiệu  suất  và
+ dữ  liệu thu thập từ  cộng  đồng.
+\paragraph{}
+ Đây  sẽ  là  phép  đo của tất  cả  các  số  liệu  trên  (thời  gian  khởi  động  ứng  dụng,  bộ  nhớ  đã  sử  dụng,
+ CPU  tiêu  thụ,  khả  năng  phản  hồi  của  UI) ...  để  so  sánh  điểm  chuẩn  hiệu  suất  với  số  liệu  thực  tế
+ từ  các  điểm  chuẩn  hiệu  suất.  Tóm  tắt  hiệu  suất  của  các  ứng  dụng  được  phát  triển  bằng  cách  sử  dụng  từng
+framework sử  dụng  các  phương  pháp  thống  kê  như  trung  bình,  độ  lệch  chuẩn  và  phương  sai.  Phương pháp cặp
+ t-test  hoặc  ANOVA  (Phân  tích  phương  sai) đã được sử  dụng   để  xác  định  xem  mức độ  khác  biệt  
+ đối với  các  số  liệu  framework  như  thời  gian  khởi  động  hay  mức  sử  dụng  bộ  nhớ.  Điều  này  giúp  ích  trong
+ phát hiện  ra  khi  nào  có  sự  khác  biệt  về  hiệu  suất  hoặc  khi  nào  chúng  chỉ  là  do  lỗi  ngẫu  nhiên.
 
+\paragraph{}
+Để  đo  độ  phức  tạp  của  mã nguồn  và  thời  gian  xây  dựng,  dòng  mã  (LOC)  có  thể  được  so  sánh  trên
+framework.  Hơn  nữa,  chúng  được  so  sánh  về  tác  động  của  chúng  đối  với  thời  gian  xây  dựng  và  triển  khai  do
+ cách  chúng  ảnh  hưởng  đến  chu  kỳ  phát  triển.  Thống  kê  mô  tả  sẽ  tóm  tắt  các  biến  này,
+ phân  tích  hồi  quy  có  thể  được  sử  dụng  để  khám  phá  mối  quan  hệ  giữa  độ  phức  tạp  của  mã nguồn và  một  số
+ số  liệu  hiệu  suất khác.
+\paragraph{}
+ Cuối  cùng,  mỗi  framework  sẽ  được  tích  hợp  để  tạo  thành  một  đánh  giá  toàn  diện.  Các  điểm  mạnh
+ và  các  điểm  yếu  trên  các  framework  sẽ  được  so  sánh  với  phản  hồi  của  nhà  phát  triển  và
+ hiểu  biết  sâu  sắc  của  cộng  đồng  và  cùng  nhau  hình  thành  nên  cái  nhìn  toàn  diện  về  hiệu  suất  của  các số  liệu của framework.
+Trong  trường  hợp  như  vậy,  chúng  ta  có  thể  nhận  thấy  sự  khác  biệt  giữa  hiệu  suất  được  quan  sát  thấy  trong
+ các  bài  kiểm  tra  chuẩn  mực  và  khó  khăn  được  báo  cáo  do  tích  hợp  API  nền tảng  gây  ra.  Việc  sử  dụng
+ tam  giác  hóa  và  có  đánh  giá  toàn  diện  về  React  Native,  Kotlin  và  Flutter  để  chỉ ra
+ một framework  tốt  hơn  sẽ  đưa  ra  những  hiểu  biết  về  việc framework phát  triển  ứng  dụng  di  động  nào
+ nên  sử  dụng cho  các  dự  án  của  bạn.
+
+\section{Hạn  chế}
+\paragraph{}
+ Nghiên  cứu  này  có  thể  có  những  hạn  chế  sau:
+\begin{itemize}
+  \item \textbf{Kích  thước  mẫu:} Các  phản  hồi  khảo  sát  và  phỏng  vấn  có  thể  không  đại  diện  đầy  đủ  cho  tất  cả
+ nhà  phát  triển  di  động.
+  \item \textbf{Sắc  thái  riêng  của  nền  tảng:}  Một  số framework  có  thể  hoạt  động  tốt  hơn  hoặc  kém  hơn  dựa  trên
+ phiên  bản  phần  cứng  hoặc  hệ  điều  hành  cụ  thể  được  sử  dụng  trong  các  bài  kiểm  tra  hiệu  suất.
+  \item \textbf{Phạm  vi  ứng  dụng:} Các  ứng  dụng  được  tạo  ra  cho  mục  đích  thử  nghiệm  có  thể  không  nắm  bắt  đầy  đủ
+ độ  phức  tạp  của  các  ứng  dụng  ở  cấp  độ  sản phẩm.
+\end{itemize}
+\paragraph{}
+Trong  khi  nghiên  cứu  này  nhằm  mục  đích  cung  cấp  một  sự  so  sánh  toàn  diện  và đầy đủ về  React
+ Native,  Kotlin  (thông  qua  Kotlin  Multi-platform  Mobile)  và  Flutter,  một  số  hạn  chế  phải  được
+ thừa  nhận.  Những  hạn  chế  này  xuất  phát  từ  những  hạn  chế  của  thiết  kế  nghiên  cứu,  phạm  vi  của
+ các framework  đang  được  so  sánh  và  các  yếu  tố  bên  ngoài  có  thể  ảnh  hưởng  đến  việc  khái  quát  hóa các
+ phát  hiện.  Việc  nhận  ra  những  hạn  chế  này  giúp  ngữ  cảnh  hóa  kết  quả  và  mang  lại  sự  minh  bạch
+ về  ranh  giới  của  nghiên  cứu.
 
