@@ -1,6 +1,9 @@
-\documentclass{article}
+\documentclass{report}
 \usepackage[utf8]{inputenc}
 \usepackage[vietnamese]{babel}
+
+% Gói geometry để chỉnh lề
+\usepackage[top=2.5cm, bottom=3cm]{geometry}
 \usepackage{graphicx}
 \usepackage[T5]{fontenc}
 
@@ -11,9 +14,9 @@
 \begin{document}
 \maketitle
 
-\input{part1.tex}
-\input{part2.tex}
-\input{part3.tex}
-\input{part4.tex}
+\include{part1.tex}
+\include{part2.tex}
+\include{part3.tex}
+\include{part4.tex}
 
 \end{document}

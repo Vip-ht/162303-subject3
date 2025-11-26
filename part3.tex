@@ -1,4 +1,4 @@
-\section{Chương 3: Phương pháp nghiên cứu}
+\chapter{Phương pháp nghiên cứu}
 \paragraph{}
 Một nghiên cứu về năng suất phát triển được thực hiện theo nhiều khía cạnh: 
 khả năng tương tác với API môi trường, hiệu suất và sự hỗ trợ của cộng đồng
@@ -50,15 +50,35 @@ Nghiên  cứu  này  nhằm  mục  đích  đưa  ra  đánh  giá  toàn  di�
  các  mô  hình  lập  trình  đặc  biệt  và  môi  trường  nền  tảng  để  phân  tích.
 \begin{figure}[h!]
     \centering
-    \includegraphics[width=1\textwidth]{figure8.png}
-    \caption{Khung  phần  tử  của  React  Native [23]}
+    \includegraphics[width=1\textwidth]{figure3.1.png}
+    \caption{Các phần  tử  của  React  Native [23]}
     \label{fig:example}
 \end{figure}
 \paragraph{}
- Khung  React  Native  đã  được  sử  dụng  trong  hình  8  bao  gồm  Redux  để  quản  lý  trạng  thái
+ Framework  React  Native  đã  được  sử  dụng  trong  hình  3.1  bao  gồm  Redux  để  quản  lý  trạng  thái
  và  các  plugin  tùy  chỉnh  để  bổ  sung  thêm  chức  năng.
 \paragraph{}
-Khung  này  nhận  được  sự  ủng  hộ  to  lớn  trong  cộng  đồng,  đặc  biệt  là  từ  một  số  lượng  lớn
- số  lượng  nhà  phát  triển  đóng  góp  vào  việc  làm  cho  khuôn  khổ  nguồn  mở.  React  Native  đã  được
- được  sử  dụng  để  cung  cấp  năng  lượng  cho  các  công  ty  lớn  như  Facebook,  Instagram  và  Airbnb  để  kể  tên  một  số  ít  và
- là  cách  bạn  biết  nó  có  mức  độ  linh  hoạt  và  mạnh  mẽ  như  vậy  trong  thế  giới  thực
+Framework  này  nhận  được  sự  ủng  hộ  to  lớn  trong  cộng  đồng,  đặc  biệt  là  từ  một  số  lượng  lớn
+  nhà  phát  triển  đóng  góp  vào  việc  duy trì  framework này là mã  nguồn  mở.  React  Native  đã  được
+ được  sử  dụng  để  trong  các  công  ty  lớn  như  Facebook,  Instagram  và  Airbnb, v.v.  
+ đó là minh chứng cho sự linh  hoạt  và  mạnh  mẽ  trong thực tế.
+\paragraph{}
+ Đặc  biệt,  framework  này  tận  dụng  cầu  nối  để  giao  tiếp  giữa  mã native  và  JavaScript,
+ và  trong  một  số  trường  hợp,  điều  này  có  thể  gây  ra  tình  trạng  nghẽn cổ chai  hiệu  suất.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\textwidth]{figure3.2.png}
+    \caption{KMM và Flutter framework [25]}
+    \label{fig:example}
+\end{figure}
+\paragraph{}
+ Framework KMM  được  hiển  thị  trong  hình  3.2,  cho  phép  chia  sẻ  logic  nghiệp vụ  giữa  iOS
+ và  Android  trong  khi  vẫn  giữ  lớp  giao  diện  người  dùng  dành  riêng  cho  nền  tảng  trong  hình  3.2.  [25]
+\paragraph{}
+ Trong  số  những  lợi  ích  của  nó,  KMM  cực  kỳ  có  lợi  vì  nó  cho  phép tận  dụng các  tính  năng  ngôn  ngữ  hiện  đại,
+súc  tích  và  an  toàn  về  kiểu  chữ của Kotlin trên  cả  hai  nền  tảng.  Bằng  cách  đó,  một  mã nguồn 
+ cơ  sở chung  có  thể  được  viết  cho  logic  ứng  dụng,  mạng  và  truy  cập  cơ  sở  dữ  liệu  bởi
+ các  nhà  phát  triển  và  UI  được  duy  trì  với  các  thành  phần  gốc  cho  từng  nền  tảng.  Tính  năng  tốt  nhất
+ của  việc  sử  dụng  Kotlin  Đa  nền  tảng  so  với  các framework  khác là trừu  tượng  hóa  cả  UI  và  logic  thành  một
+mã cơ  sở  duy nhất,  ở  đây  là  cách  tiếp  cận  này  cung  cấp  sự  cân  bằng  tuyệt  vời  giữa  hiệu  suất  gốc  và
+ tái  sử  dụng  mã
