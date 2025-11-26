@@ -1,12 +1,12 @@
 \chapter{Phương pháp nghiên cứu}
 \paragraph{}
 Một nghiên cứu về năng suất phát triển được thực hiện theo nhiều khía cạnh: 
-khả năng tương tác với API môi trường, hiệu suất và sự hỗ trợ của cộng đồng
+khả năng tương tác với API nền tảng, hiệu suất và sự hỗ trợ của cộng đồng
 nhằm so sánh React Native, Kotlin và Flutter. Nghiên cứu này sử dụng kết hợp các
 kỹ thuật định tính và định lượng để đưa ra đánh giá đầy đủ về các framework.
 \paragraph{}
 Trong nghiên cứu này, mục tiêu chính là đưa ra một phân tích toàn diện về hiệu suất,
-năng suất của nhà phát triển và tương tác với API môi trường, cũng  như  sự  hỗ  trợ  của  cộng  đồng  đối  với  React  Native,
+năng suất của nhà phát triển và tương tác với API nền tảng, cũng  như  sự  hỗ  trợ  của  cộng  đồng  đối  với  React  Native,
  Kotlin  (Kotlin  đa  nền  tảng)  và  Flutter. Trong  thời  đại  ứng  dụng  di  động phát  triển,
  đặc  biệt  là  cho  các  ứng  dụng  đa  nền  tảng  cung  cấp  trải  nghiệm  giống nhau trong
  cả môi trường của  thiết  bị  iOS  và  Android,  các  framework  này  đều  rất  quan  trọng. Với  tính  năng  động
@@ -28,15 +28,15 @@ Nghiên  cứu  này  nhằm  mục  đích  đưa  ra  đánh  giá  toàn  di�
  yêu  cầu,  không  chỉ  xem  xét  hiệu  suất  kỹ  thuật  mà  còn  cả  sự  hài  lòng  của  nhà  phát  triển  và sự
  hỗ  trợ của cộng  đồng.  Cuối  cùng,  nghiên  cứu  này  có  thể  là  một  phần  của  cuộc  tranh  luận  đang  diễn  ra  về  đâu là các  phương  pháp  và  công  cụ tốt  nhất
    trong  phát  triển  ứng  dụng  di  động  trong  thế  giới  công  nghệ  thay  đổi  nhanh  chóng.
-\subsection{Lựa chọn Framework}
+\section{Lựa chọn Framework}
 \paragraph{}
  Ngành  công  nghiệp ứng dụng di  động  đã  dẫn  đến  việc  lựa  chọn  React  Native  cũng  như là Kotlin  (thông  qua
  Kotlin  Đa  nền  tảng  Di  động)  và  Flutter  vì  chúng  cung  cấp  các  giải  pháp đa  nền  tảng phù hợp với
  nhu  cầu  phát  triển.  Một  quá  trình  đánh  giá  kiểm  tra  từng  framework  bằng  cách  sử  dụng
  các  tiêu  chí  bao  gồm:
- \begin{itemize}
+ \begin{itemize}[label=\scalebox{1.5}{$\bullet$}]
     \item Năng suất phát triển
-    \item Khả năng tương tác với API môi trường
+    \item Khả năng tương tác với API nền tảng
     \item Hiệu năng
     \item Hỗ trợ từ cộng đồng
 \end{itemize}
@@ -52,7 +52,7 @@ Nghiên  cứu  này  nhằm  mục  đích  đưa  ra  đánh  giá  toàn  di�
     \centering
     \includegraphics[width=1\textwidth]{figure3.1.png}
     \caption{Các phần  tử  của  React  Native [23]}
-    \label{fig:example}
+    %\label{fig:example}
 \end{figure}
 \paragraph{}
  Framework  React  Native  đã  được  sử  dụng  trong  hình  3.1  bao  gồm  Redux  để  quản  lý  trạng  thái
@@ -69,7 +69,7 @@ Framework  này  nhận  được  sự  ủng  hộ  to  lớn  trong  cộng  
     \centering
     \includegraphics[width=1\textwidth]{figure3.2.png}
     \caption{KMM và Flutter framework [25]}
-    \label{fig:example}
+    %\label{fig:example}
 \end{figure}
 \paragraph{}
  Framework KMM  được  hiển  thị  trong  hình  3.2,  cho  phép  chia  sẻ  logic  nghiệp vụ  giữa  iOS
@@ -81,4 +81,55 @@ súc  tích  và  an  toàn  về  kiểu  chữ của Kotlin trên  cả  hai  
  các  nhà  phát  triển  và  UI  được  duy  trì  với  các  thành  phần  gốc  cho  từng  nền  tảng.  Tính  năng  tốt  nhất
  của  việc  sử  dụng  Kotlin  Đa  nền  tảng  so  với  các framework  khác là trừu  tượng  hóa  cả  UI  và  logic  thành  một
 mã cơ  sở  duy nhất,  ở  đây  là  cách  tiếp  cận  này  cung  cấp  sự  cân  bằng  tuyệt  vời  giữa  hiệu  suất  gốc  và
- tái  sử  dụng  mã
+ tái  sử  dụng  mã.
+\paragraph{}
+ Đặc  biệt,  các  nhóm  có  kinh  nghiệm  phát  triển  ứng  dụng  di  động bằng ngôn ngữ gốc (Java, Swift, v.v.)  được  thu  hút  
+ vào  Kotlin, vì  điều  này  cho  phép  họ  chuyển  dần  sang  các  công  cụ  đa  nền  tảng .
+\paragraph{}
+ Do  đó,  các  nhà  phát  triển  không  quen  thuộc  với  Kotlin  hoặc  chỉ  đơn  giản  là  muốn  có  thứ  gì  đó  mới  lạ
+ đối  với  phát triển  UI  có  thể  gặp phải  một  số  khó  khăn.
+\section{Tiêu chí đánh giá}
+\paragraph{}
+Tiêu  chí  đánh  giá  cho  mỗi  framework  được  chia  thành  bốn  loại:
+\subsection{ Năng  suất  của  nhà  phát  triển:}
+\begin{itemize}[label=$\circ$]
+    \item \textbf{Dễ học:}  Mức  độ  dễ  dàng  cho  các  nhà  phát  triển  (đặc  biệt  là  những  người  chưa  có  kinh  nghiệm)
+  để  tìm  hiểu framework.
+    \item \textbf{Công cụ hỗ trợ:} Có  sẵn  hỗ  trợ  IDE,  công  cụ  gỡ  lỗi,  thử  nghiệm
+ framework  và  tích  hợp  với  quy  trình  CI/CD.
+    \item \textbf{Khả  năng  tái  sử  dụng  mã:}  Số lượng  mã  có  thể  được  tái  sử  dụng  trên  các  nền  tảng  (iOS  và
+ Android).
+\end{itemize}
+\subsection{Dễ  dàng  tương  tác  với  API  nền tảng:}
+\begin{itemize}[label=$\circ$]
+    \item \textbf{Truy  cập  vào  các  tính  năng  gốc:}   Dễ  dàng  truy  cập  và  tương  tác  với  các  API  nền tảng 
+ như  máy  ảnh,  GPS  và  cảm  biến  thiết  bị.
+    \item \textbf{Khả năng  tương  thích  đa  nền  tảng:} Mức  độ  trừu  tượng  hóa  các API đặc biệt nền  tảng
+  trong  khi  vẫn  duy  trì  hiệu  suất  gốc.
+\end{itemize}
+\subsection{Hiệu  suất:}
+\begin{itemize}[label=$\circ$]
+    \item \textbf{Thời  gian  khởi  động:}   Thời  gian  cần  thiết  để  ứng  dụng  sẵn  sàng  cho  người  dùng
+ sự  tương  tác.
+    \item \textbf{Hiệu  suất  thời  gian  chạy:}   Độ  mượt  của  kết  xuất  UI,  bộ  nhớ  và  mức  sử  dụng  CPU
+ trong  quá  trình  vận  hành  ứng  dụng.
+    \item \textbf{Mức  tiêu  thụ  pin:}Ảnh  hưởng  đến  thời  lượng  pin  trong  quá  trình  sử  dụng  ứng  dụng  thông  thường.
+\end{itemize}
+\subsection{Hỗ  trợ của cộng  đồng  và  tổ chức:}
+\begin{itemize}[label=$\circ$]
+    \item \textbf{Quy mô  và  mức  độ  tham  gia  của  cộng  đồng: } Số  lượng  người  đóng  góp,  hoạt  động  trên  diễn  đàn,
+ đóng  góp  nguồn  mở  và  sự  tham  gia  chung  vào  hệ  sinh  thái  nhà  phát  triển.
+    \item \textbf{Tài  liệu  và  Hướng  dẫn:} Chất  lượng  và  độ  sâu  của  tài  liệu  chính  thức,
+ cũng  như  sự  sẵn  có  của  các  hướng  dẫn  và  bài  giảng  từ  cộng  đồng.
+    \item \textbf{Ứng  dụng  doanh  nghiệp:}  Ứng  dụng  từng  framework trong các  tổ  chức  lớn  và
+ phù  hợp  với  các  ứng  dụng  doanh  nghiệp.
+\end{itemize}
+\section{Phương  pháp  phân  tích  dữ  liệu}
+\paragraph{}
+ Dữ  liệu  thu  thập  được  thông  qua  các đo đạc  hiệu  suất,  khảo  sát  nhà  phát  triển  và đánh giá từ cộng  đồng
+  có  thể  được  phân  tích  bằng  cả  thống  kê  mô  tả  và  phân  tích  chuyên  đề.
+\begin{itemize}
+  \item 
+\end{itemize}
+
+
