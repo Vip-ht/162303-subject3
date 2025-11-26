@@ -1,1 +1,64 @@
-\section{part3}
+\section{Chương 3: Phương pháp nghiên cứu}
+\paragraph{}
+Một nghiên cứu về năng suất phát triển được thực hiện theo nhiều khía cạnh: 
+khả năng tương tác với API môi trường, hiệu suất và sự hỗ trợ của cộng đồng
+nhằm so sánh React Native, Kotlin và Flutter. Nghiên cứu này sử dụng kết hợp các
+kỹ thuật định tính và định lượng để đưa ra đánh giá đầy đủ về các framework.
+\paragraph{}
+Trong nghiên cứu này, mục tiêu chính là đưa ra một phân tích toàn diện về hiệu suất,
+năng suất của nhà phát triển và tương tác với API môi trường, cũng  như  sự  hỗ  trợ  của  cộng  đồng  đối  với  React  Native,
+ Kotlin  (Kotlin  đa  nền  tảng)  và  Flutter. Trong  thời  đại  ứng  dụng  di  động phát  triển,
+ đặc  biệt  là  cho  các  ứng  dụng  đa  nền  tảng  cung  cấp  trải  nghiệm  giống nhau trong
+ cả môi trường của  thiết  bị  iOS  và  Android,  các  framework  này  đều  rất  quan  trọng. Với  tính  năng  động
+ bản  chất  của  hệ  sinh  thái di  động,  tất  cả  các  framework  này  cần  được  xem  xét
+cẩn thận  để  hiểu  phương  pháp  nào  hiệu  quả,  tại  sao  và  áp  dụng  cho  loại  ứng  dụng  nào.
+\paragraph{}
+ Để  làm  được  điều  này,  nghiên  cứu sử dụng phương  pháp  tiếp  cận  hỗn  hợp.  Với  phương  pháp  này,  mỗi framework
+ có  thể  được  hiểu  rõ  hơn  một  cách  toàn  diện  về  mặt  công  nghệ  cũng  như  kinh  nghiệm mà
+ các  nhà  phát  triển nhận được từ  việc  sử  dụng  chúng.  Trong  quá  trình  đánh  giá,  các  ứng  dụng  được  tạo  ra  bằng  cách  sử  dụng  từng framework
+ được  đánh  giá  về  mặt  hiệu  suất.  Các  ứng  dụng  được  đánh  giá  dựa  trên  thời  gian  khởi  động,  mức  sử  dụng  bộ  nhớ,
+ Tiêu  thụ  CPU  và  khả  năng  phản  hồi  của  giao  diện  người  dùng.  Trong  các  ứng  dụng  này,  chúng  ta  có  thể  kiểm  soát
+ môi  trường  để  đo  lường  và  so  sánh  các  số  liệu  cốt  lõi  về  hiệu  suất  cho  từng framework.  Ngoài  ra,
+ chúng  tôi  đánh  giá  cách  các framework này  ảnh  hưởng  đến  tốc  độ  và  quá  trình  phát  triển  vì  chúng  đặt  ra
+ những  thách  thức  liên  quan  đến  độ  phức  tạp  của  mã  và  thời  gian  xây  dựng/triển  khai.
+\paragraph{}
+Nghiên  cứu  này  nhằm  mục  đích  đưa  ra  đánh  giá  toàn  diện  và  cân  bằng  về  React  Native,
+ Kotlin  và  Flutter.  Sau  khi  thu  thập  những  phát  hiện  này,  chúng  sẽ  có  giá  trị  đối  với  các  nhà  phát  triển,  quản  lý,
+ và  các  tổ  chức  khác  để  xem framework nào  là  lựa  chọn  tốt  nhất  cho  dự  án  cụ  thể  của  họ
+ yêu  cầu,  không  chỉ  xem  xét  hiệu  suất  kỹ  thuật  mà  còn  cả  sự  hài  lòng  của  nhà  phát  triển  và sự
+ hỗ  trợ của cộng  đồng.  Cuối  cùng,  nghiên  cứu  này  có  thể  là  một  phần  của  cuộc  tranh  luận  đang  diễn  ra  về  đâu là các  phương  pháp  và  công  cụ tốt  nhất
+   trong  phát  triển  ứng  dụng  di  động  trong  thế  giới  công  nghệ  thay  đổi  nhanh  chóng.
+\subsection{Lựa chọn Framework}
+\paragraph{}
+ Ngành  công  nghiệp ứng dụng di  động  đã  dẫn  đến  việc  lựa  chọn  React  Native  cũng  như là Kotlin  (thông  qua
+ Kotlin  Đa  nền  tảng  Di  động)  và  Flutter  vì  chúng  cung  cấp  các  giải  pháp đa  nền  tảng phù hợp với
+ nhu  cầu  phát  triển.  Một  quá  trình  đánh  giá  kiểm  tra  từng  framework  bằng  cách  sử  dụng
+ các  tiêu  chí  bao  gồm:
+ \begin{itemize}
+    \item Năng suất phát triển
+    \item Khả năng tương tác với API môi trường
+    \item Hiệu năng
+    \item Hỗ trợ từ cộng đồng
+\end{itemize}
+\paragraph{}
+Đánh  giá  trong  nghiên  cứu  này  phụ  thuộc  cơ  bản  vào  các  framework đã chọn:  React Native
+  cùng  với  Kotlin  (thông  qua  Kotlin  đa nền tảng)  và  Flutter  vì  chúng  xác  định
+ cả  tính  hợp  lệ  và  tính  thực  tiễn  của đối  với nghiên  cứu phát  triển ứng  dụng  di  động  hiện  đại
+ .  Nhiều  tổ  chức  khác  nhau  ở  cả  các  công  ty  khởi  nghiệp  nhỏ  và  các  doanh  nghiệp  lớn  đã  lựa  chọn
+ những framework  này  vì  chúng  ngày  càng  được  các  nhà  phát  triển  ưa  chuộng.
+ Các framework  đại  diện  cho  những  lựa  chọn  nổi  bật  vì  chúng  cung  cấp  các  tính  năng  khác  nhau  cùng  với
+ các  mô  hình  lập  trình  đặc  biệt  và  môi  trường  nền  tảng  để  phân  tích.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\textwidth]{figure8.png}
+    \caption{Khung  phần  tử  của  React  Native [23]}
+    \label{fig:example}
+\end{figure}
+\paragraph{}
+ Khung  React  Native  đã  được  sử  dụng  trong  hình  8  bao  gồm  Redux  để  quản  lý  trạng  thái
+ và  các  plugin  tùy  chỉnh  để  bổ  sung  thêm  chức  năng.
+\paragraph{}
+Khung  này  nhận  được  sự  ủng  hộ  to  lớn  trong  cộng  đồng,  đặc  biệt  là  từ  một  số  lượng  lớn
+ số  lượng  nhà  phát  triển  đóng  góp  vào  việc  làm  cho  khuôn  khổ  nguồn  mở.  React  Native  đã  được
+ được  sử  dụng  để  cung  cấp  năng  lượng  cho  các  công  ty  lớn  như  Facebook,  Instagram  và  Airbnb  để  kể  tên  một  số  ít  và
+ là  cách  bạn  biết  nó  có  mức  độ  linh  hoạt  và  mạnh  mẽ  như  vậy  trong  thế  giới  thực
