@@ -30,7 +30,7 @@
 *.glo
 *.gls
 *.ist
-
+*.txt
 .vscode/
 *.code-workspace
 

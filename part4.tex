@@ -1,11 +1,28 @@
-\chapter{Kết quả và thảo luận} 
-test
-This is part4 section. It contains some text for part4.    
-fd 
-\section{part4.1}
-This is part4.1 subsection. It contains some text for part4.1. tôi đang viết tiếng việt cho bài này
-\subsection{part4.1.1}
-This is part4.1.1 subsubsection. It contains some text for part4.1.1
-\paragraph{part4.1.1.1}
-This is part4.1.1.1 paragraph. It contains some text for part4 ể edra ẳ ồ ợ 
-ợ ư ầ ứ ừ ử ữ ự ê ẹ ề ế ể ễ ệ ô ò ó ọ õ ồ ố ổ ỗ ộ ơ ò ó ọ õ ở ớ ụ ù ú ũ ư ừ ú ụ ữ ự
+\chapter{Kết quả và thảo luận}
+\paragraph{}
+Trong chương này, tôi đã so sánh chi tiết giữa React Native, Kotlin Multiplatform và Flutter. Trong
+phần so sánh này, chúng tôi đã thảo luận về sự khác biệt đáng kể về hiệu năng, tốc độ phát triển,
+khả năng bảo trì mã nguồn, mức độ hỗ trợ kỹ thuật từ ecosystem, và khả năng tích hợp tốt như thế 
+nào với các Native API.
+Để có cái nhìn thực tế, chúng tôi đã bao gồm các ví dụ mã nguồn cho từng framework, minh họa cách
+chúng xử lý các tác vụ phổ biến như UI rendering, quản lý trạng thái và tích hợp API. Phân tích này chỉ
+ra điểm mạnh và điểm yếu của các framework, đồng thời giúp các developer và tổ chức hiểu rõ hơn xem framework
+nào phù hợp với các yêu cầu của dự án họ.
+\section{So sánh hiệu năng}
+\paragraph{}
+Trải nghiệm người dùng chắc chắn được cải thiện nhờ tốc độ hoạt động của ứng dụng di động, vì các ứng dụng di động đóng vai
+trò thiết yếu đối với bất kỳ tác vụ hiệu năng nào. Trong phần dưới đây, chúng tôi đã phân tích cơ chế kết xuất,
+mức sử dụng bộ nhớ và tốc độ thực thi của React Native, Flutter và Kotlin Multiplatform.
+\subsection{React Native}
+\paragraph{}
+React Native giao tiếp với các mô-đun gốc thông qua một cầu nối (bridge) bằng JavaScript.
+Điều này cho phép chúng ta phát triển cho các nền tảng khác nhau nhưng lại 
+nảy sinh các điểm nghẽn về hiệu năng, đặc biệt là khi hoạt ảnh hoặc việc tính toán quá nặng.
+\paragraph{}
+Rendering a List
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figure9.png}
+    \caption{Ứng dụng React Rendering List}
+    %\label{fig:example}
+\end{figure}
