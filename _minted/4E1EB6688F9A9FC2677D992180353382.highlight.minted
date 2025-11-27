@@ -1,0 +1,16 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k}{import}\PYG{+w}{ }\PYG{n+nx}{React}\PYG{+w}{ }\PYG{k+kr}{from}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}react\PYGZsq{}}\PYG{p}{;}
+\PYG{k}{import}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{FlatList}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{Text}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{View}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{k+kr}{from}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}react\PYGZhy{}native\PYGZsq{}}\PYG{p}{;}
+
+\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{data}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{Array}\PYG{p}{.}\PYG{k+kr}{from}\PYG{p}{(\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{length}\PYG{o}{:}\PYG{+w}{ }\PYG{l+m+mf}{1000}\PYG{+w}{ }\PYG{p}{\PYGZcb{},}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{\PYGZus{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{(\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{id}\PYG{o}{:}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{title}\PYG{o}{:}\PYG{+w}{ }\PYG{l+s+sb}{`Item }\PYG{l+s+si}{\PYGZdl{}\PYGZob{}}\PYG{n+nx}{i}\PYG{l+s+si}{\PYGZcb{}}\PYG{l+s+sb}{`}\PYG{+w}{ }\PYG{p}{\PYGZcb{}));}
+
+\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{App}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{()}\PYG{+w}{ }\PYG{p}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{(}
+\PYG{+w}{  }\PYG{o}{\PYGZlt{}}\PYG{n+nx}{FlatList}
+\PYG{+w}{    }\PYG{n+nx}{data}\PYG{o}{=}\PYG{p}{\PYGZob{}}\PYG{n+nx}{data}\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{n+nx}{renderItem}\PYG{o}{=}\PYG{p}{\PYGZob{}(\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{item}\PYG{+w}{ }\PYG{p}{\PYGZcb{})}\PYG{+w}{ }\PYG{p}{=\PYGZgt{}}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{n+nx}{Text}\PYG{o}{\PYGZgt{}}\PYG{p}{\PYGZob{}}\PYG{n+nx}{item}\PYG{p}{.}\PYG{n+nx}{title}\PYG{p}{\PYGZcb{}}\PYG{o}{\PYGZlt{}}\PYG{err}{/Text\PYGZgt{}\PYGZcb{}}
+\PYG{+w}{    }\PYG{n+nx}{keyExtractor}\PYG{o}{=}\PYG{p}{\PYGZob{}}\PYG{n+nx}{item}\PYG{+w}{ }\PYG{p}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n+nx}{item}\PYG{p}{.}\PYG{n+nx}{id}\PYG{p}{.}\PYG{n+nx}{toString}\PYG{p}{()\PYGZcb{}}
+\PYG{+w}{  }\PYG{o}{/\PYGZgt{}}
+\PYG{p}{);}
+
+\PYG{k}{export}\PYG{+w}{ }\PYG{k}{default}\PYG{+w}{ }\PYG{n+nx}{App}\PYG{p}{;}
+\end{MintedVerbatim}

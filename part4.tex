@@ -19,10 +19,132 @@ React Native giao tiếp với các mô-đun gốc thông qua một cầu nối 
 Điều này cho phép chúng ta phát triển cho các nền tảng khác nhau nhưng lại 
 nảy sinh các điểm nghẽn về hiệu năng, đặc biệt là khi hoạt ảnh hoặc việc tính toán quá nặng.
 \paragraph{}
-Rendering a List
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.8\textwidth]{figure9.png}
-    \caption{Ứng dụng React Rendering List}
-    %\label{fig:example}
-\end{figure}
+{\large \textbf{Rendering a List}}
+\begin{minted}[frame=lines, framesep=2mm, baselinestretch=1.2, fontsize=\footnotesize, linenos]{javascript}
+import React from 'react';
+import { FlatList, Text, View } from 'react-native';
+
+const data = Array.from({ length: 1000 }, (_, i) => ({ id: i, title: `Item ${i}` }));
+
+const App = () => (
+  <FlatList
+    data={data}
+    renderItem={({ item }) => <Text>{item.title}</Text>}
+    keyExtractor={item => item.id.toString()}
+  />
+);
+
+export default App;
+\end{minted}
+\paragraph{}
+\textbf{Ưu điểm:}Dễ dàng triển khai và tận dụng hệ sinh thái JavaScript.
+\paragraph{}
+\textbf{Nhược điểm:}Hiệu năng bị giảm sút đối với các danh sách lớn do sự phụ thuộc vào cầu nối JavaScript-Native.
+\subsection{Kotlin Multiplatform}
+\paragraph{}
+Nền tảng Kotlin cung cấp khả năng chia sẻ logic nghiệp vụ trên các platform
+khác nhau và sử dụng các thành phần native UI của chúng. Hệ quả là, các tác
+vụ đặc thù của platform hoạt động hiệu quả hơn.
+\paragraph{}
+{\large \textbf{Logic nghiệp vụ dùng chung}}
+\begin{minted}[frame=lines, framesep=2mm, baselinestretch=1.2, fontsize=\footnotesize, linenos]{kotlin}
+    // Module được chia sẻ (dung chung cho Android và iOS)
+expect class Platform() {
+    val name: String
+}
+
+// Triển khai trên Android
+actual class Platform actual constructor() {
+    actual val name: String = "Android"
+}
+
+// Triển khai trên iOS
+actual class Platform actual constructor() {
+    actual val name: String = "iOS"
+}
+\end{minted}
+\paragraph{}
+\textbf{Ưu điểm: }Hiệu năng rất tốt đối với các tác vụ được tối ưu hóa cho
+platform và tích hợp chặt chẽ với các Native API.
+\paragraph{}
+\textbf{Nhược điểm: }Yêu cầu việc triển khai UI riêng biệt cho từng platform.
+\subsection{Flutter}
+\paragraph{}
+Trong Flutter, Dart là ngôn ngữ lập trình, và nó sử dụng Skia rendering engine
+để tạo ra các UI có hiệu năng cao và khả năng tùy biến mạnh mẽ. Bản thân cầu nối
+được loại bỏ trong quá trình biên dịch (Flutter không cần một cầu nối trung gian
+lúc chạy như React Native, vì code Dart được biên dịch thẳng ra mã máy), vì vậy
+nó trở thành mã gốc.
+\paragraph{}
+{\large \textbf{Rendering a List}}
+\begin{minted}[frame=lines, framesep=2mm, baselinestretch=1.2, fontsize=\footnotesize, linenos]{dart}
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  final List<String> items = List.generate(1000, (i) => 'Item $i');
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: ListView.builder(
+          itemCount: items.length,
+          itemBuilder: (context, index) => ListTile(title: Text(items[index])),
+        ),
+      ),
+    );
+  }
+}
+\end{minted}
+\paragraph{}
+\textbf{Ưu điểm: }Hiệu năng xuất sắc, UI nhất quán trên các platform.
+\paragraph{}
+\textbf{Nhược điểm: }Dung lượng ứng dụng lớn hơn do phải bao gồm Flutter engine.
+
+\section{Tốc độ phát triển}
+Có các yếu tố như code reusability, hot reload, các prebuilt component và tính
+sẵn có của chúng, quyết định tốc độ phát triển.
+
+\subsection{React Native}
+\paragraph{}
+\textbf{Hot Reload: }Được hỗ trợ, cho phép các vòng lặp nhanh chóng.
+\paragraph{}
+\textbf{Code Reusability: }Cao, vì mã JavaScript có thể chạy trên cả iOS và Android.
+\paragraph{}
+\textbf{Ecosystem: }Hỗ trợ thư viện rộng lớn thông qua npm.
+\paragraph{}
+Nhưng một trong những tính năng chính nổi tiếng của React Native là khả năng
+khởi động phát triển nhanh, bao gồm hot reload và code reusability. Kết hợp
+với tất cả các tính năng này và một ecosystem rộng lớn mà nó hỗ trợ, việc
+phát triển ứng dụng di động đa nền tảng thường là một lựa chọn hàng đầu.
+\paragraph{}
+\textbf{Hot Reload:}
+\paragraph{}
+Hot reload là một trong những tính năng phổ biến nhất
+của React Native vì đội ngũ phát triển có thể thấy các thay đổi theo
+thời gian thực mà không cần khởi động lại ứng dụng. Nó giúp cắt giảm đáng kể
+thời gian của quy trình phát triển vì các lập trình viên có thể nhanh chóng thấy
+kết quả của việc sửa đổi code ngay lập tức. Trong trường hợp của một nút bấm
+hoặc những thay đổi về hành vi của một component, các thay đổi được áp dụng
+trên trình giả lập hoặc thiết bị vật lý ngay lập tức. Bằng cách thực hiện quy trình
+phát triển lặp lại, React Native giúp giảm thiểu thời gian chết và mở rộng năng
+suất, biến nó thành một lựa chọn khả thi cho các team đang làm việc với
+deadline gấp rút.
+\paragraph{}
+\textbf{Code Reusability:}
+\paragraph{}
+Với React Native, tái sử dụng mã nguồn là con át chủ bài trong phát triển ứng dụng vì
+chúng cho phép các lập trình viên làm việc trên một codebase ứng dụng duy nhất
+hoạt động trên cả nền tảng iOS và Android. Điều này được thực hiện bằng
+cách sử dụng JavaScript và React framework, mang lại sự tương đồng cho các
+chi tiết đặc thù của nền tảng khác nhau thông qua một API thống nhất. Các
+component như nút bấm hoặc danh sách có thể được viết một lần và tái sử
+dụng trên các nền tảng khác nhau mà không cần thay đổi nhiều. Điều này
+không chỉ giảm thời gian phát triển mà còn giảm chi phí bảo trì cũng như
+các bản cập nhật chỉ cần áp dụng một lần. Tuy nhiên, các lập trình viên cần viết
+native module bằng Java, Objective-C hoặc Swift, điều này có thể mang lại
+sự phức tạp.

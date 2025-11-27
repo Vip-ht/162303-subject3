@@ -1,0 +1,23 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k}{import}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}package:flutter/material.dart\PYGZsq{}}\PYG{p}{;}
+
+\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{  }\PYG{n}{runApp}\PYG{p}{(}\PYG{n}{MyApp}\PYG{p}{());}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k+kd}{class}\PYG{+w}{ }\PYG{n+nc}{MyApp}\PYG{+w}{ }\PYG{k+kd}{extends}\PYG{+w}{ }\PYG{n}{StatelessWidget}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{  }\PYG{k+kd}{final}\PYG{+w}{ }\PYG{n}{List}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{String}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{items}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{List}\PYG{p}{.}\PYG{n}{generate}\PYG{p}{(}\PYG{l+m}{1000}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{i}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}Item }\PYG{l+s+si}{\PYGZdl{}}\PYG{n}{i}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{);}
+
+\PYG{+w}{  }\PYG{n+nd}{@override}
+\PYG{+w}{  }\PYG{n}{Widget}\PYG{+w}{ }\PYG{n}{build}\PYG{p}{(}\PYG{n}{BuildContext}\PYG{+w}{ }\PYG{n}{context}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{return}\PYG{+w}{ }\PYG{n}{MaterialApp}\PYG{p}{(}
+\PYG{+w}{      }\PYG{n+nl}{home:}\PYG{+w}{ }\PYG{n}{Scaffold}\PYG{p}{(}
+\PYG{+w}{        }\PYG{n+nl}{body:}\PYG{+w}{ }\PYG{n}{ListView}\PYG{p}{.}\PYG{n}{builder}\PYG{p}{(}
+\PYG{+w}{          }\PYG{n+nl}{itemCount:}\PYG{+w}{ }\PYG{n}{items}\PYG{p}{.}\PYG{n}{length}\PYG{p}{,}
+\PYG{+w}{          }\PYG{n+nl}{itemBuilder:}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{context}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{index}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n}{ListTile}\PYG{p}{(}\PYG{n+nl}{title:}\PYG{+w}{ }\PYG{n}{Text}\PYG{p}{(}\PYG{n}{items}\PYG{p}{[}\PYG{n}{index}\PYG{p}{])),}
+\PYG{+w}{        }\PYG{p}{),}
+\PYG{+w}{      }\PYG{p}{),}
+\PYG{+w}{    }\PYG{p}{);}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{MintedVerbatim}
