@@ -209,3 +209,32 @@ một số khó khăn, nhưng tính năng hot reload thực thụ vẫn không c
 lập trình viên có thể phải tốn nhiều thời gian hơn để khởi động lại ứng dụng
 nhằm xem các thay đổi, điều này kém hiệu quả hơn so với các framework
 như Flutter hay React Native.
+\paragraph{}
+\textbf{Code Reusability:}
+\paragraph{}
+Kotlin Multiplatform vượt trội vì nó hỗ trợ việc chia sẻ các logic nghiệp vụ
+giữa các nền tảng. Kotlin cho phép một phần mã nguồn của bạn
+(như network, data processing, v.v.) được viết bằng Kotlin và
+sử dụng trên cả Android, iOS và thậm chí là các ứng dụng web hoặc
+desktop. Nó giúp bạn tránh việc sao chép và maintain cùng một
+functionality trong phần lõi (core). Tuy nhiên, phần UI cần được
+triển khai độc lập trên mỗi nền tảng vì Kotlin Multiplatform không
+cung cấp một UI framework thống nhất. Điều này ngụ ý rằng các lập trình viên
+cần viết UI code đặc thù cho từng nền tảng bằng Java/Kotlin cho Android và
+Swift/Objective-C cho iOS, và việc này có thể làm tăng chi phí phát triển
+đối với các UI phức tạp.
+\paragraph{}
+\textbf{Ecosystem:}
+\paragraph{}
+Tuy nhiên, ecosystem của Kotlin Multiplatform vẫn đang trong giai đoạn
+phát triển tốt nhưng chưa hoàn toàn trưởng thành như React Native hay
+Flutter. Bản thân Kotlin được hỗ trợ khá tốt, nhưng các công cụ và thư
+viện của Kotlin Multiplatform vẫn đang trong quá trình hoàn thiện. Kotlin là
+ngôn ngữ được tạo ra bởi JetBrains và họ đang tích cực đầu tư vào KMM,
+cộng đồng cũng đang lớn mạnh với nhiều thư viện và plugin hơn được xây
+dựng cho đa nền tảng. Tuy nhiên, các lập trình viên có thể vẫn tìm thấy
+những khoảng trống trong ecosystem và sẽ cần xây dựng các giải pháp cụ
+thể hoặc làm việc với thư viện được định nghĩa riêng cho nền tảng.
+\paragraph{}
+\subsection{Flutter}
+\paragraph{}
