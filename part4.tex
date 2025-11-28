@@ -148,3 +148,182 @@ không chỉ giảm thời gian phát triển mà còn giảm chi phí bảo tr�
 các bản cập nhật chỉ cần áp dụng một lần. Tuy nhiên, các lập trình viên cần viết
 native module bằng Java, Objective-C hoặc Swift, điều này có thể mang lại
 sự phức tạp.
+\paragraph{}
+\textbf{Ecosystem:}
+\paragraph{}
+Một lợi ích thực sự của React Native là nó hưởng lợi từ ecosystem
+JavaScript rộng lớn – về cơ bản thông qua npm (Node Package Manager),
+cung cấp cho bạn quyền truy cập vào hàng ngàn thư viện và công cụ.
+Đây cũng là một ecosystem rộng lớn cho phép các lập trình viên sử dụng
+các giải pháp được xây dựng sẵn cho các tác vụ phổ biến, trong đó có
+quản lý trạng thái (Redux hoặc MobX), điều hướng (React Navigation)
+và tích hợp API (Axios). Hơn nữa, việc tùy chỉnh React Native khá
+dễ dàng, và cộng đồng xung quanh React Native cũng lớn và tích cực,
+hỗ trợ tài liệu phong phú, hướng dẫn và nhiều tài nguyên bên ngoài.
+Điều này giúp các lập trình viên dễ dàng tìm ra giải pháp cho các vấn đề
+cũng như các phương pháp tốt nhất.
+\begin{minted}[frame=lines, framesep=2mm, baselinestretch=1.2, fontsize=\footnotesize, linenos]{javascript}
+import React, { useEffect, useState } from 'react';
+import { View, Text, FlatList } from 'react-native';
+
+const App = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch('https://jsonplaceholder.typicode.com/posts')
+      .then(response => response.json())
+      .then(json => setData(json))
+      .catch(error => console.error(error));
+  }, []);
+}
+\end{minted}
+\paragraph{}
+\subsection{Kotlin Multiplatform}
+\paragraph{}
+\textbf{Hot Reload: }Mặc dù các công cụ như KMM (Kotlin Multiplatform Mobile) có
+tốc độ phát triển nhanh hơn, nhưng nó không được hỗ trợ natively.
+\paragraph{}
+\textbf{Code Reusability: }Nó có các Logic nghiệp vụ dùng chung và UI code mang tính
+đặc thù nền tảng.
+\paragraph{}
+\textbf{Ecosystem: }Đang phát triển, nhưng chưa hoàn thiện như React Native hay Flutter.
+\paragraph{}
+Kotlin Multiplatform (KMM) là một framework hiện đại được thiết kế để cung
+cấp mã nguồn hiện đại dùng chung trên nhiều nền tảng mà không cần phải tái cấu trúc mã nguồn
+chút nào; Nó cung cấp khả năng tái cấu trúc tự nhiên cho mã đặc thù nền tảng. Phương pháp này
+mang lại lợi ích win-win vì nó có sự cân bằng phù hợp giữa khả năng tái sử dụng và tối ưu hóa
+theo nền tảng, là một ứng viên sáng giá cho các project cần shared functionality nhưng lại cần
+hiệu năng gốc và giao diện mang lại cảm giác quen thuộc cho người dùng.
+\paragraph{}
+\textbf{Hot Reload:}
+\paragraph{}
+Kotlin Multiplatform không hỗ trợ hot reload một cách tự nhiên, điều này
+có nghĩa là các thay đổi chỉ có hiệu lực khi chạy ứng dụng 
+(khác với React Native hay Flutter) và điều này có khả năng 
+làm chậm quy trình phát triển, đặc biệt là khi làm việc với các UI 
+component. Tuy nhiên, bằng cách sử dụng các công cụ như
+Kotlin Multiplatform Mobile (KMM) và sự tích hợp với Android Studio,
+việc tăng tốc độ phát triển trở nên dễ dàng hơn nhờ thời gian biên dịch ngắn hơn
+và các công cụ gỡ lỗi tốt hơn. Mặc dù các công cụ này giúp giải quyết
+một số khó khăn, nhưng tính năng hot reload thực thụ vẫn không có, và các
+lập trình viên có thể phải tốn nhiều thời gian hơn để khởi động lại ứng dụng
+nhằm xem các thay đổi, điều này kém hiệu quả hơn so với các framework
+như Flutter hay React Native.
+\paragraph{}
+\textbf{Code Reusability:}
+\paragraph{}
+Kotlin Multiplatform vượt trội vì nó hỗ trợ việc chia sẻ các logic nghiệp vụ
+giữa các nền tảng. Kotlin cho phép một phần mã nguồn của bạn
+(như network, data processing, v.v.) được viết bằng Kotlin và
+sử dụng trên cả Android, iOS và thậm chí là các ứng dụng web hoặc
+desktop. Nó giúp bạn tránh việc sao chép và maintain cùng một
+functionality trong phần lõi (core). Tuy nhiên, phần UI cần được
+triển khai độc lập trên mỗi nền tảng vì Kotlin Multiplatform không
+cung cấp một UI framework thống nhất. Điều này ngụ ý rằng các lập trình viên
+cần viết UI code đặc thù cho từng nền tảng bằng Java/Kotlin cho Android và
+Swift/Objective-C cho iOS, và việc này có thể làm tăng chi phí phát triển
+đối với các UI phức tạp.
+\paragraph{}
+\textbf{Ecosystem:}
+\paragraph{}
+Tuy nhiên, ecosystem của Kotlin Multiplatform vẫn đang trong giai đoạn
+phát triển tốt nhưng chưa hoàn toàn trưởng thành như React Native hay
+Flutter. Bản thân Kotlin được hỗ trợ khá tốt, nhưng các công cụ và thư
+viện của Kotlin Multiplatform vẫn đang trong quá trình hoàn thiện. Kotlin là
+ngôn ngữ được tạo ra bởi JetBrains và họ đang tích cực đầu tư vào KMM,
+cộng đồng cũng đang lớn mạnh với nhiều thư viện và plugin hơn được xây
+dựng cho đa nền tảng. Tuy nhiên, các lập trình viên có thể vẫn tìm thấy
+những khoảng trống trong ecosystem và sẽ cần xây dựng các giải pháp cụ
+thể hoặc làm việc với thư viện được định nghĩa riêng cho nền tảng.
+\paragraph{}
+\subsection{Flutter}
+\paragraph{}
+\textbf{Hot Reload: }Cho phép thay đổi UI một cách nhanh chóng và dễ dàng.
+\paragraph{}
+\textbf{Code Reusability: }Cao, với một codebase duy nhất cho cả iOS và Android. 
+(tạm thời chưa thể dịch, dịch bừa)
+\paragraph{}
+\textbf{Ecosystem: }Phát triển nhanh với nhiều package có sẵn.
+\paragraph{}
+Google là một trong những lý do khiến Flutter nhanh chóng trở nên phổ biến
+như một framework đáng gờm để tạo ra các ứng dụng đa nền tảng, cho phép
+bạn phát huy tối đa khả năng đồng thời đảm bảo ứng dụng vận hành mượt mà nhất.
+Các thuộc tính nổi bật của nó, chẳng hạn như hot reload (văn bản gốc ghi là
+hot extract), khả năng tái sử dụng code to lớn, và một ecosystem phong phú,
+khiến nó trở thành một sự thay thế xứng đáng cho các lập trình viên có mong muốn
+tạo ra các ứng dụng ổn định và tuyệt đẹp về mặt thẩm mỹ cho iOS và Android.
+\paragraph{}
+\textbf{Hot Reload:}
+\paragraph{}
+Khả năng Hot reload – một trong những tính năng được ca ngợi nhất của
+Flutter – là khả năng nhìn thấy các thay đổi trong UI gần như ngay lập
+tức mà không cần khởi động lại app. Tính năng này thực sự thúc đẩy quá
+trình phát triển phần mềm một cách mạnh mẽ, đặc biệt là khi đang tinh chỉnh
+giao diện người dùng hoặc gỡ lỗi. Ví dụ, nếu một lập trình viên thay
+đổi padding của một widget hoặc thay đổi phối màu, nó sẽ phản ánh
+trên màn hình ngay lập tức. Một phần quan trọng của quy trình làm
+việc lặp lại (iterative workflow) này là tăng năng suất và duy trì
+trải nghiệm lập trình viên tốt, khiến Flutter trở thành lựa chọn
+lý tưởng cho việc tạo mẫu nhanh và cả các ứng dụng UI-heavy.
+\paragraph{}
+\textbf{Code Reusability:}
+\paragraph{}
+Flutter là một công cụ hữu ích mang lại khả năng tái sử dụng mã nguồn cao bằng
+cách tạo ra một codebase duy nhất có thể sử dụng trên cả hai nền tảng
+iOS và Android. Điều này được thực hiện thông qua Kiến trúc dựa trên Widget
+của Flutter, cung cấp cho bạn số lượng khổng lồ các widget có khả năng tùy chỉnh
+để xây dựng UI. Các widget được thiết kế để trông và hoạt động như các
+thành phần bản địa trên mỗi nền tảng. Ví dụ, một nút bấm hoặc một dạng hiển thị danh sách
+có thể được tạo một lần và sử dụng trên các nền tảng mà không cần
+thay đổi, cũng như không cần bận tâm đến các điều chỉnh cho đặc trưng của mỗi nền tảng.
+Với cách tiếp cận này, thời gian phát triển và công sức được giảm bớt, tính
+bảo trì và khả năng mở rộng được đảm bảo, và kết quả là chúng ta tiết
+kiệm được thời gian và công sức phát triển.
+\paragraph{}
+\textbf{Ecosystem:}
+\paragraph{}
+Flutter sở hữu một ecosystem phong phú với vô số các widget được dựng sẵn,
+package và tool nhằm giúp việc phát triển phần mềm trở nên nhanh chóng hơn.
+Không có gì mà Flutter không có package hỗ trợ, đặc biệt là đối với
+quản lý trạng thái (như Provider hoặc Riverpod), điều hướng (như Flutter Navigator)
+và tích hợp API (như Dio hoặc http package). Ecosystem của Flutter được
+hậu thuẫn bởi Google và là một cộng đồng đang phát triển nhanh chóng,
+điều này đồng nghĩa với sự cải tiến liên tục và hỗ trợ rộng rãi. Các lợi
+thế khác của quá trình phát triển là bạn có thể dễ dàng tiếp cận các
+tài liệu chi tiết, hướng dẫn, và cũng như các tài nguyên
+do cộng đồng đóng góp.
+\section{Code Maintainability}
+\paragraph{}
+Sự rõ ràng của codebase, tính môđun hoá và khả năng gỡ lỗi đơn giản
+là những tham số quan trọng của khả năng bảo trì mã nguồn.
+\subsection{React Native}
+\paragraph{}
+\textbf{Ưu điểm:} Vì JavaScript là một ngôn ngữ phổ biến, nên việc tiếp nhận những
+cái mới các lập trình viên trở nên dễ dàng hơn.
+\paragraph{}
+Trước hết, React Native sử dụng JavaScript phổ biến, do đó hưởng lợi
+từ sự quen thuộc rộng rãi với nó. Nó làm giảm nhu cầu tiếp nhận của các
+lập trình viên mới (vì rất nhiều lập trình viên đã có kinh nghiệm phát
+triển bằng JavaScript và React Framework). Tính mô-đun hóa thông qua các
+component của React Native thúc đẩy kiến trúc dựa trên component cho
+ứng dụng, nơi mà ứng dụng có thể được tách nhỏ thành các component có thể tái sử dụng.
+Tính mô-đun hóa giúp việc bảo trì dễ dàng hơn vì sự thay đổi ở bất kỳ
+component nào trong số này ít có khả năng ảnh hưởng đến những cái khác.
+Hơn nữa, cơ sở khổng lồ các thư viện và công cụ thông qua npm giải quyết
+các vấn đề điển hình về khả năng bảo trì như quản lý trạng thái và điều hướng.
+\paragraph{}
+\textbf{Nhược điểm:}Việc gỡ lỗi không dễ dàng vì nó liên quan đến một
+JavaScript Native bridge (một cơ chế trung gian giúp mã JavaScript giao
+tiếp được với các mô-đun gốc của hệ điều hành).
+\paragraph{}
+React Native gặp một số thách thức về khả năng bảo trì, khiến nó tuy là
+một công cụ tuyệt vời nhưng vẫn tồn tại vài vấn đề về bảo trì.
+JavaScript-Native bridge tạo thêm những điểm gây khó khăn (pain points)
+khi thực hiện gỡ lỗi giữa JavaScript và mã gốc. Các lỗi nằm trong lớp
+bridge đặc biệt khó chẩn đoán và sửa chữa. Hơn nữa, bản chất động của
+JavaScript có thể gây ra các runtime error mà không bị phát hiện cho
+đến khi thực thi thực tế, điều này không lý tưởng để đảm bảo độ tin
+cậy của mã nguồn. Tuy nhiên, bằng cách sử dụng các công cụ như
+TypeScript, một số vấn đề trên có thể được giảm thiểu.
+Mặc dù vậy, chúng không được hỗ trợ một cách tự nhiên trong React Native,
+đồng nghĩa với việc yêu cầu thêm nhiều công đoạn thiết lập và cấu hình.

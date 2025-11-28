@@ -1,0 +1,15 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k}{import}\PYG{+w}{ }\PYG{n+nx}{React}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{useEffect}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{useState}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{k+kr}{from}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}react\PYGZsq{}}\PYG{p}{;}
+\PYG{k}{import}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n+nx}{View}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{Text}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{FlatList}\PYG{+w}{ }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{k+kr}{from}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}react\PYGZhy{}native\PYGZsq{}}\PYG{p}{;}
+
+\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{App}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{()}\PYG{+w}{ }\PYG{p}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{  }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{p}{[}\PYG{n+nx}{data}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{setData}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{useState}\PYG{p}{([]);}
+
+\PYG{+w}{  }\PYG{n+nx}{useEffect}\PYG{p}{(()}\PYG{+w}{ }\PYG{p}{=\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nx}{fetch}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}https://jsonplaceholder.typicode.com/posts\PYGZsq{}}\PYG{p}{)}
+\PYG{+w}{      }\PYG{p}{.}\PYG{n+nx}{then}\PYG{p}{(}\PYG{n+nx}{response}\PYG{+w}{ }\PYG{p}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n+nx}{response}\PYG{p}{.}\PYG{n+nx}{json}\PYG{p}{())}
+\PYG{+w}{      }\PYG{p}{.}\PYG{n+nx}{then}\PYG{p}{(}\PYG{n+nx}{json}\PYG{+w}{ }\PYG{p}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n+nx}{setData}\PYG{p}{(}\PYG{n+nx}{json}\PYG{p}{))}
+\PYG{+w}{      }\PYG{p}{.}\PYG{k}{catch}\PYG{p}{(}\PYG{n+nx}{error}\PYG{+w}{ }\PYG{p}{=\PYGZgt{}}\PYG{+w}{ }\PYG{n+nx}{console}\PYG{p}{.}\PYG{n+nx}{error}\PYG{p}{(}\PYG{n+nx}{error}\PYG{p}{));}
+\PYG{+w}{  }\PYG{p}{\PYGZcb{},}\PYG{+w}{ }\PYG{p}{[]);}
+\PYG{p}{\PYGZcb{}}
+\end{MintedVerbatim}
