@@ -292,3 +292,38 @@ hậu thuẫn bởi Google và là một cộng đồng đang phát triển nhan
 thế khác của quá trình phát triển là bạn có thể dễ dàng tiếp cận các
 tài liệu chi tiết, hướng dẫn, và cũng như các tài nguyên
 do cộng đồng đóng góp.
+\section{Code Maintainability}
+\paragraph{}
+Sự rõ ràng của codebase, tính môđun hoá và khả năng gỡ lỗi đơn giản
+là những tham số quan trọng của khả năng bảo trì mã nguồn.
+\subsection{React Native}
+\paragraph{}
+\textbf{Ưu điểm:} Vì JavaScript là một ngôn ngữ phổ biến, nên việc tiếp nhận những
+cái mới các lập trình viên trở nên dễ dàng hơn.
+\paragraph{}
+Trước hết, React Native sử dụng JavaScript phổ biến, do đó hưởng lợi
+từ sự quen thuộc rộng rãi với nó. Nó làm giảm nhu cầu tiếp nhận của các
+lập trình viên mới (vì rất nhiều lập trình viên đã có kinh nghiệm phát
+triển bằng JavaScript và React Framework). Tính mô-đun hóa thông qua các
+component của React Native thúc đẩy kiến trúc dựa trên component cho
+ứng dụng, nơi mà ứng dụng có thể được tách nhỏ thành các component có thể tái sử dụng.
+Tính mô-đun hóa giúp việc bảo trì dễ dàng hơn vì sự thay đổi ở bất kỳ
+component nào trong số này ít có khả năng ảnh hưởng đến những cái khác.
+Hơn nữa, cơ sở khổng lồ các thư viện và công cụ thông qua npm giải quyết
+các vấn đề điển hình về khả năng bảo trì như quản lý trạng thái và điều hướng.
+\paragraph{}
+\textbf{Nhược điểm:}Việc gỡ lỗi không dễ dàng vì nó liên quan đến một
+JavaScript Native bridge (một cơ chế trung gian giúp mã JavaScript giao
+tiếp được với các mô-đun gốc của hệ điều hành).
+\paragraph{}
+React Native gặp một số thách thức về khả năng bảo trì, khiến nó tuy là
+một công cụ tuyệt vời nhưng vẫn tồn tại vài vấn đề về bảo trì.
+JavaScript-Native bridge tạo thêm những điểm gây khó khăn (pain points)
+khi thực hiện gỡ lỗi giữa JavaScript và mã gốc. Các lỗi nằm trong lớp
+bridge đặc biệt khó chẩn đoán và sửa chữa. Hơn nữa, bản chất động của
+JavaScript có thể gây ra các runtime error mà không bị phát hiện cho
+đến khi thực thi thực tế, điều này không lý tưởng để đảm bảo độ tin
+cậy của mã nguồn. Tuy nhiên, bằng cách sử dụng các công cụ như
+TypeScript, một số vấn đề trên có thể được giảm thiểu.
+Mặc dù vậy, chúng không được hỗ trợ một cách tự nhiên trong React Native,
+đồng nghĩa với việc yêu cầu thêm nhiều công đoạn thiết lập và cấu hình.
