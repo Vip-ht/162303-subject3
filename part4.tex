@@ -327,3 +327,66 @@ cậy của mã nguồn. Tuy nhiên, bằng cách sử dụng các công cụ nh
 TypeScript, một số vấn đề trên có thể được giảm thiểu.
 Mặc dù vậy, chúng không được hỗ trợ một cách tự nhiên trong React Native,
 đồng nghĩa với việc yêu cầu thêm nhiều công đoạn thiết lập và cấu hình.
+\subsection{Kotlin Multiplatform}
+\paragraph{}
+\textbf{Ưu điểm:} Nó tương đối mới và hoạt động tốt với Android hơn
+so với các ngôn ngữ khác.
+\paragraph{}
+Kotlin Multiplatform, dựa trên strong typing và null safety của
+ngôn ngữ Kotlin, mang lại sự gia tăng đáng kể cho chất lượng mã nguồn
+và khả năng bảo trì. Điều này làm cho codebase dễ dự đoán hơn và
+dễ gỡ lỗi hơn vì các tính năng này giúp tìm ra lỗi tại compile time,
+giảm thiểu nguy cơ xảy ra runtime crash.
+Nó cũng làm tăng khả năng bảo trì vì các bản cập nhật hoặc sửa lỗi
+chỉ cần được thực hiện một lần trong shared module và các cập nhật
+đó sẽ tự động có sẵn trên tất cả các nền tảng. Cú pháp của Kotlin
+cũng rất súc tích và các tính năng như data class và
+extension function giúp mã nguồn sạch hơn và dễ đọc hơn.
+\paragraph{}
+\textbf{Nhược điểm:} Yêu cầu kiến thức về cả Kotlin và các ngôn ngữ
+riêng biệt cho từng nền tảng. (Java/Swift).
+\paragraph{}
+Kotlin Multiplatform là một trong những thách thức lớn vì
+Kotlin Multiplatform yêu cầu bạn viết UI code đặc thù cho
+một một nền tảng. Mặc dù dùng chung các logic nghiệp vụ, mỗi nền tảng
+phải triển khai UI layer riêng biệt và sử dụng ngôn ngữ gốc,
+tức là Java/Kotlin cho Android, Swift/Objective-C cho iOS.
+Điều này có thể làm cho codebase trở nên phức tạp hơn,
+và nó có thể đòi hỏi kiến thức chuyên môn về nhiều ngôn ngữ
+từ phía các lập trình viên. Thêm vào đó, ecosystem của
+Kotlin Multiplatform vẫn đang hoàn thiện, nghĩa là các thư viện
+và công cụ có thể bị thiếu và một số giải pháp thủ công sẽ trở
+nên cần thiết, khiến việc bảo trì trở nên bất tiện.
+\subsection{Flutter}
+\paragraph{}
+\textbf{Ưu điểm:} Khả năng định kiểu tốt của Dart và kiến trúc dựa
+trên Widget của Flutter giúp tạo ra code sạch và thể hiện tính mô đun cao.
+\paragraph{}
+Nhờ được xây dựng trên ngôn ngữ Dart và lấy Widget làm trọng tâm,
+Flutter giúp mã nguồn trở nên dễ bảo trì hơn. Cơ chế định kiểu tĩnh
+(static typing) giúp cơ sở mã tăng độ tin cậy và giảm thiểu đáng kể
+các lỗi thời gian chạy. Hơn nữa, kiến trúc dựa trên Widget cho phép
+lập trình viên tổ chức ứng dụng như một cấu trúc cây phân cấp, bao
+gồm các component độc lập có khả năng tái sử dụng. Cách tiếp cận
+này giúp cải thiện tính mô-đun hóa, đồng thời làm cho mã nguồn
+trở nên mạch lạc và dễ bảo trì hơn. Ngoài ra, tính năng hot reload
+của Flutter cho phép các lập trình viên nhanh chóng iterate trên UI,
+nhờ đó kiểm tra và tinh chỉnh các sửa đổi UI mà không cần phải khởi
+động lại app. Hơn nữa, framework này cung cấp sẵn hàng loạt widget
+và công cụ có thể dùng ngay lập tức. Điều này giúp hạn chế việc phải
+tự viết code thủ công cho các tính năng, từ đó giảm bớt công sức bảo trì.
+\paragraph{}
+\textbf{Nhược điểm:} Một điểm trừ của Dart đó là còn khá xa lạ hơn đối với nhiều lập trình viên.
+\paragraph{}
+Một thách thức khác cần đối mặt khi dùng Flutter là mức độ phổ biến chưa cao,
+chủ yếu do ngôn ngữ Dart chưa thực sự quen thuộc với phần lớn lập trình viên.
+Thực tế thì Dart khá dễ học – đặc biệt đối với những lập trình viên đã có
+kiến thức về lập trình hướng đối tượng. Tuy nhiên, Dart vẫn chưa thực sự
+phổ biến rộng rãi khi so sánh với JavaScript hay Kotlin. Điều này có thể
+khiến việc tìm kiếm và tiếp cận đối với các lập trình viên mới trở nên khó khăn,
+hoặc việc tuyển dụng các lập trình viên Flutter giàu kinh nghiệm cũng không dễ dàng.
+Hơn nữa, việc sử dụng rendering engine riêng của Flutter cũng khiến dung lượng ứng dụng
+trở nên nặng hơn, đòi hỏi nhiều công sức tối ưu hóa để duy trì hiệu năng của ứng dụng
+và trải nghiệm người dùng.
+\section{Ecosystem và cộng đồng hỗ trợ}
+\paragraph{}
