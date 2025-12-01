@@ -454,3 +454,63 @@ cách liền mạch hơn khi chơi trò chơi, vì nút “Restart” cũng đư
 trí thuận tiện. Trong React, phần lớn thiết kế UX có khả năng sử dụng
 các công nghệ web hiện đại giúp tăng cường trải nghiệm mượt mà với tốc độ
 cập nhật nhanh hơn và các hiệu ứng chuyển tiếp mượt mà hơn.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{ttt2.png}
+  \caption{Giao diện trò chơi Tic-tac-toe bằng React Native}
+\end{figure}
+\section{Tổng kết và so sánh}
+Trước khi đi sâu vào việc triển khai chi tiết hoặc lựa chọn một công nghệ
+cụ thể, việc so sánh các tính năng chính và khả năng của từng framework
+là rất cần thiết. Bảng dưới đây trình bày tóm tắt những khác biệt chính
+giữa React Native, Kotlin Multiplatform và Flutter. Nó tập trung vào
+các khía cạnh quan trọng như hiệu năng, sự thuận tiện trong quá trình
+phát triển, và khả năng bảo trì mã nguồn, sự hỗ trợ từ ecosystem, và
+khả năng tích hợp tốt như thế nào với các Native API. Sự so sánh này
+nhằm mục đích cung cấp một cái nhìn tổng quan nhanh chóng nhưng sâu
+sắc để giúp các lập trình viên và những người ra quyết định lựa chọn công
+cụ phù hợp dựa trên các nhu cầu và ưu tiên của dự án.
+\begin{table}[H]
+    \centering
+    \caption{\textbf{Tóm tắt so sánh giữa cả ba ngôn ngữ}}
+    \vspace{0.3cm} % Tạo khoảng cách nhỏ giữa tên bảng và bảng
+    \renewcommand{\arraystretch}{1.5} % Tăng chiều cao dòng cho thoáng
+    
+    % Định nghĩa bảng: X là cột tự co giãn, | là đường kẻ dọc
+    \begin{tabularx}{\textwidth}{|>{\bfseries}p{3cm}|X|X|X|}
+        \hline
+        \rowcolor{lightgray!30} % Tô màu xám nhạt cho hàng tiêu đề
+        Tiêu chí & React Native & Kotlin Multiplatform & Flutter \\ \hline
+        
+        % Hàng 1: Hiệu năng
+        Hiệu năng & 
+        Trung bình (do bridge overhead) & 
+        Cao (native UI) & 
+        Cao (Skia engine) \\ \hline
+        
+        % Hàng 2: Tốc độ phát triển
+        Tốc độ phát triển & 
+        Nhanh (hot reload, JavaScript) & 
+        Trung bình (UI đặc thù nền tảng) & 
+        Nhanh (hot reload, widgets) \\ \hline
+        
+        % Hàng 3: Khả năng bảo trì code
+        Khả năng bảo trì code & 
+        Trung bình (thách thức của JavaScript) & 
+        Cao (strong typing của Kotlin) & 
+        Cao (strong typing của Dart) \\ \hline
+        
+        % Hàng 4: Hỗ trợ hệ sinh thái
+        Hỗ trợ hệ sinh thái & 
+        Trưởng thành & 
+        Đang phát triển & 
+        Phong phú \\ \hline
+        
+        % Hàng 5: Tích hợp Native API
+        Tích hợp Native API & 
+        Yêu cầu bridging & 
+        Liền mạch (Android), tốn công sức (iOS) & 
+        Platform channels \\ \hline
+        
+    \end{tabularx}
+\end{table}
