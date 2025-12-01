@@ -327,3 +327,204 @@ cậy của mã nguồn. Tuy nhiên, bằng cách sử dụng các công cụ nh
 TypeScript, một số vấn đề trên có thể được giảm thiểu.
 Mặc dù vậy, chúng không được hỗ trợ một cách tự nhiên trong React Native,
 đồng nghĩa với việc yêu cầu thêm nhiều công đoạn thiết lập và cấu hình.
+\subsection{Kotlin Multiplatform}
+\paragraph{}
+\textbf{Ưu điểm:} Nó tương đối mới và hoạt động tốt với Android hơn
+so với các ngôn ngữ khác.
+\paragraph{}
+Kotlin Multiplatform, dựa trên strong typing và null safety của
+ngôn ngữ Kotlin, mang lại sự gia tăng đáng kể cho chất lượng mã nguồn
+và khả năng bảo trì. Điều này làm cho codebase dễ dự đoán hơn và
+dễ gỡ lỗi hơn vì các tính năng này giúp tìm ra lỗi tại compile time,
+giảm thiểu nguy cơ xảy ra runtime crash.
+Nó cũng làm tăng khả năng bảo trì vì các bản cập nhật hoặc sửa lỗi
+chỉ cần được thực hiện một lần trong shared module và các cập nhật
+đó sẽ tự động có sẵn trên tất cả các nền tảng. Cú pháp của Kotlin
+cũng rất súc tích và các tính năng như data class và
+extension function giúp mã nguồn sạch hơn và dễ đọc hơn.
+\paragraph{}
+\textbf{Nhược điểm:} Yêu cầu kiến thức về cả Kotlin và các ngôn ngữ
+riêng biệt cho từng nền tảng. (Java/Swift).
+\paragraph{}
+Kotlin Multiplatform là một trong những thách thức lớn vì
+Kotlin Multiplatform yêu cầu bạn viết UI code đặc thù cho
+một một nền tảng. Mặc dù dùng chung các logic nghiệp vụ, mỗi nền tảng
+phải triển khai UI layer riêng biệt và sử dụng ngôn ngữ gốc,
+tức là Java/Kotlin cho Android, Swift/Objective-C cho iOS.
+Điều này có thể làm cho codebase trở nên phức tạp hơn,
+và nó có thể đòi hỏi kiến thức chuyên môn về nhiều ngôn ngữ
+từ phía các lập trình viên. Thêm vào đó, ecosystem của
+Kotlin Multiplatform vẫn đang hoàn thiện, nghĩa là các thư viện
+và công cụ có thể bị thiếu và một số giải pháp thủ công sẽ trở
+nên cần thiết, khiến việc bảo trì trở nên bất tiện.
+\subsection{Flutter}
+\paragraph{}
+\textbf{Ưu điểm:} Khả năng định kiểu tốt của Dart và kiến trúc dựa
+trên Widget của Flutter giúp tạo ra code sạch và thể hiện tính mô đun cao.
+\paragraph{}
+Nhờ được xây dựng trên ngôn ngữ Dart và lấy Widget làm trọng tâm,
+Flutter giúp mã nguồn trở nên dễ bảo trì hơn. Cơ chế định kiểu tĩnh
+(static typing) giúp cơ sở mã tăng độ tin cậy và giảm thiểu đáng kể
+các lỗi thời gian chạy. Hơn nữa, kiến trúc dựa trên Widget cho phép
+lập trình viên tổ chức ứng dụng như một cấu trúc cây phân cấp, bao
+gồm các component độc lập có khả năng tái sử dụng. Cách tiếp cận
+này giúp cải thiện tính mô-đun hóa, đồng thời làm cho mã nguồn
+trở nên mạch lạc và dễ bảo trì hơn. Ngoài ra, tính năng hot reload
+của Flutter cho phép các lập trình viên nhanh chóng iterate trên UI,
+nhờ đó kiểm tra và tinh chỉnh các sửa đổi UI mà không cần phải khởi
+động lại app. Hơn nữa, framework này cung cấp sẵn hàng loạt widget
+và công cụ có thể dùng ngay lập tức. Điều này giúp hạn chế việc phải
+tự viết code thủ công cho các tính năng, từ đó giảm bớt công sức bảo trì.
+\paragraph{}
+\textbf{Nhược điểm:} Một điểm trừ của Dart đó là còn khá xa lạ hơn đối với nhiều lập trình viên.
+\paragraph{}
+Một thách thức khác cần đối mặt khi dùng Flutter là mức độ phổ biến chưa cao,
+chủ yếu do ngôn ngữ Dart chưa thực sự quen thuộc với phần lớn lập trình viên.
+Thực tế thì Dart khá dễ học – đặc biệt đối với những lập trình viên đã có
+kiến thức về lập trình hướng đối tượng. Tuy nhiên, Dart vẫn chưa thực sự
+phổ biến rộng rãi khi so sánh với JavaScript hay Kotlin. Điều này có thể
+khiến việc tìm kiếm và tiếp cận đối với các lập trình viên mới trở nên khó khăn,
+hoặc việc tuyển dụng các lập trình viên Flutter giàu kinh nghiệm cũng không dễ dàng.
+Hơn nữa, việc sử dụng rendering engine riêng của Flutter cũng khiến dung lượng ứng dụng
+trở nên nặng hơn, đòi hỏi nhiều công sức tối ưu hóa để duy trì hiệu năng của ứng dụng
+và trải nghiệm người dùng.
+\section{Ecosystem và cộng đồng hỗ trợ}
+\paragraph{}
+Mức độ đóng góp của ecosystem và cộng đồng hỗ trợ hoàn toàn phụ thuộc vào việc
+ecosystem đó lớn mạnh như thế nào.
+\subsection{React Native}
+\paragraph{}
+Ecosystem: Trưởng thành, với số lượng lớn các thư viện và công cụ. Cộng đồng: Lớn mạnh và tích cực,
+với tài liệu phong phú và các tài nguyên đến từ nhiều nguồn.
+\subsection{Kotlin Multiplatform}
+\paragraph{}
+\textbf{Ecosystem:} Đang phát triển, với sự hỗ trợ mạnh mẽ từ JetBrains và cộng đồng Android.
+Quy mô nhỏ hơn React Native và Flutter, nhưng đang tăng trưởng nhanh chóng.
+\subsection{Flutter}
+\paragraph{}
+\textbf{Widgets và các package:} Rất đa dạng.
+\paragraph{}
+\textbf{Sự hậu thuẫn:} Lớn mạnh và tích cực từ Google.
+\section{Tích hợp với các Native API}
+\subsection{React Native}
+Các module gốc có thể được viết bằng Java/Objective-C/Swift. Nó có điểm hạn chế là đòi hỏi nỗ
+lực của lập trình viên để tạo cầu nối giữa JavaScript và mã nguồn.
+\subsection{Kotlin Multiplatform}
+Nó hoạt động trơn tru với Android; còn đối với iOS thì phải phát triển
+bằng Swift/Objective-C.
+\paragraph{}
+\textbf{Hạn chế:} Để tích hợp sâu, chủ yếu phải sử dụng mã nguồn đặc thù cho từng nền tảng.
+\subsection{Flutter}
+Các kênh nền tảng cho phép tích hợp với mã nguồn một cách dễ dàng.
+\paragraph{}
+\textbf{Hạn chế:} Cần viết mã nguồn gốc của mỗi nền tảng cho các tính năng nâng cao.
+\section{Thiết kế UI/UX của Ứng dụng}
+\paragraph{}
+Trong trò chơi Tic-Tac-Toe bằng Flutter, UI được thiết kế gọn gàng và
+tối giản, sử dụng tốt chữ nghiêng cùng với việc sử dụng layout tốt và
+đơn giản nhằm giúp chúng ta hiểu rõ hơn về lượng code tối thiểu cần
+viết để đạt được mục tiêu đã định. Màn hình hiển thị tiêu đề trò chơi
+“TIC-TAC-TOE” bằng chữ lớn, theo sau là phần gợi ý rằng đang đến lượt
+của người chơi một.
+Thiết kế có thể bao gồm một bảng phối màu đơn giản với độ tương phản cao
+để dễ đọc hơn, và vị trí nút “Restart” được đặt hợp lý để sử dụng thuận
+tiện. UX mang tính trực quan, với các gợi ý rõ ràng giúp dẫn dắt
+người dùng theo diễn biến trò chơi. Đúng với đặc trưng của Flutter, các animation
+và transition mượt mà giúp toàn bộ trải nghiệm được cải thiện hơn nữa.
+Tuy nhiên, khả năng cao là app này được xây dựng sử dụng responsive design,
+vì vậy nó sẽ hoạt động tốt trên các kích thước màn hình khác nhau.
+Ý tưởng chủ đạo đơn giản và phù hợp với cách chơi, dễ tiếp cận với người dùng
+ở mọi lứa tuổi do không bị rối mắt và tập trung vào các yếu tố thiết yếu.
+Yếu tố chức năng được ưu tiên hàng đầu, giúp người dùng có thể chơi ngay
+lập tức mà không mất thời gian tìm hiểu cách sử dụng.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\textwidth]{tictactoe.png}
+    \caption{Giao diện trò chơi Tic-Tac-Toe bằng Flutter}
+\end{figure}
+\paragraph{}
+Mặc dù các nguyên tắc UI trong ứng dụng Tic Tac Toe bằng React có thể
+tương tự, nhưng các lựa chọn về phong cách của ứng dụng này có thể
+khác biệt vì React cho phép các component của nó linh hoạt. Đầu tiên,
+tiêu đề "TIC-TAC-TOE" được hiển thị một cách nổi bật, và thiết kế của
+phiên bản React có thể sinh động hơn với hiệu ứng hover hoặc thậm chí một
+animation nhỏ để giúp mọi thứ trở nên trực quan và có tính tương tác cao hơn.
+Quản lý trạng thái của React cũng sẽ cho phép chúng ta cập nhật UI một
+cách liền mạch hơn khi chơi trò chơi, vì nút “Restart” cũng được đặt ở vị
+trí thuận tiện. Trong React, phần lớn thiết kế UX có khả năng sử dụng
+các công nghệ web hiện đại giúp tăng cường trải nghiệm mượt mà với tốc độ
+cập nhật nhanh hơn và các hiệu ứng chuyển tiếp mượt mà hơn.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{ttt2.png}
+  \caption{Giao diện trò chơi Tic-tac-toe bằng React Native}
+\end{figure}
+\section{Tổng kết và so sánh}
+Trước khi đi sâu vào việc triển khai chi tiết hoặc lựa chọn một công nghệ
+cụ thể, việc so sánh các tính năng chính và khả năng của từng framework
+là rất cần thiết. Bảng dưới đây trình bày tóm tắt những khác biệt chính
+giữa React Native, Kotlin Multiplatform và Flutter. Nó tập trung vào
+các khía cạnh quan trọng như hiệu năng, sự thuận tiện trong quá trình
+phát triển, và khả năng bảo trì mã nguồn, sự hỗ trợ từ ecosystem, và
+khả năng tích hợp tốt như thế nào với các Native API. Sự so sánh này
+nhằm mục đích cung cấp một cái nhìn tổng quan nhanh chóng nhưng sâu
+sắc để giúp các lập trình viên và những người ra quyết định lựa chọn công
+cụ phù hợp dựa trên các nhu cầu và ưu tiên của dự án.
+\begin{table}[H]
+    \centering
+    \caption{\textbf{Tóm tắt so sánh giữa cả ba ngôn ngữ}}
+    \vspace{0.3cm} % Tạo khoảng cách nhỏ giữa tên bảng và bảng
+    \renewcommand{\arraystretch}{1.5} % Tăng chiều cao dòng cho thoáng
+    
+    % Định nghĩa bảng: X là cột tự co giãn, | là đường kẻ dọc
+    \begin{tabularx}{\textwidth}{|>{\bfseries}p{3cm}|X|X|X|}
+        \hline
+        \rowcolor{lightgray!30} % Tô màu xám nhạt cho hàng tiêu đề
+        Tiêu chí & React Native & Kotlin Multiplatform & Flutter \\ \hline
+        
+        % Hàng 1: Hiệu năng
+        Hiệu năng & 
+        Trung bình (do bridge overhead) & 
+        Cao (native UI) & 
+        Cao (Skia engine) \\ \hline
+        
+        % Hàng 2: Tốc độ phát triển
+        Tốc độ phát triển & 
+        Nhanh (hot reload, JavaScript) & 
+        Trung bình (UI đặc thù nền tảng) & 
+        Nhanh (hot reload, widgets) \\ \hline
+        
+        % Hàng 3: Khả năng bảo trì code
+        Khả năng bảo trì code & 
+        Trung bình (thách thức của JavaScript) & 
+        Cao (strong typing của Kotlin) & 
+        Cao (strong typing của Dart) \\ \hline
+        
+        % Hàng 4: Hỗ trợ hệ sinh thái
+        Hỗ trợ hệ sinh thái & 
+        Trưởng thành & 
+        Đang phát triển & 
+        Phong phú \\ \hline
+        
+        % Hàng 5: Tích hợp Native API
+        Tích hợp Native API & 
+        Yêu cầu bridging & 
+        Liền mạch (Android), tốn công sức (iOS) & 
+        Platform channels \\ \hline
+        
+    \end{tabularx}
+\end{table}
+\section{Khuyến nghị, đề xuất}
+Có nhiều lựa chọn về các khung phát triển đa nền tảng nhằm đáp ứng nhu cầu
+của dự án. React Native được khuyên dùng khi ưu tiên hàng đầu là tốc độ
+phát triển, nhờ việc các kỹ sư JavaScript có thể tận dụng các phương pháp
+lập trình vốn đã quen thuộc. Đối với các nhà phát triển xây dựng ứng dụng
+theo hướng ưu tiên Android, Kotlin Multiplatform mang lại lợi ích to lớn,
+bởi nó cho phép tái sử dụng các phần logic nghiệp vụ quan trọng sang mọi
+nền tảng khác mà không gặp khó khăn. Trong trường hợp dự án yêu cầu hiệu
+năng tối ưu, sự đồng nhất về thiết kế và mã nguồn hoạt động trên mọi môi
+trường, thì Flutter là lựa chọn sáng giá nhờ tốc độ vượt trội của bộ máy
+kết xuất và khả năng tùy biến linh hoạt các thành phần giao diện. Mỗi
+khung làm việc đều sở hữu những thế mạnh riêng; hiệu quả sẽ đạt mức tối
+đa khi đặc thù dự án phù hợp với các thế mạnh đó và đội ngũ phát triển
+nắm vững cách khai thác chúng.
