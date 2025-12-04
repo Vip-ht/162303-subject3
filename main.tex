@@ -1,24 +1,31 @@
 \documentclass{report}
 
 % Gói geometry để chỉnh lề
-\usepackage[top=2.5cm, bottom=3cm]{geometry}
+\usepackage[left=3.5cm,right=2.5cm,top=2.5cm, bottom=3cm]{geometry}
 \usepackage{enumitem}
 \usepackage{graphicx}
 \usepackage{minted2}
 \usepackage{float}
-\usepackage{polyglossia}
-\setdefaultlanguage{vietnamese}
+\usepackage[pdfborder={0 0 0} ]{hyperref}
+\usepackage{utopia}
+\usepackage{xcolor}
+\usepackage{tikz} 
+\usepackage{scrextend}
+\changefontsizes{14pt}
+\usetikzlibrary{calc}
+\usepackage{tabularx}
+\usepackage[table]{xcolor}
 
-\title{nhóm 3}
-\author{Group7}
-\date{July 2025}
+
 
 \begin{document}
-\maketitle
 
+\include{firstpage}
+\include{part0.tex}
 \include{part1.tex}
 \include{part2.tex}
 \include{part3.tex}
 \include{part4.tex}
+\include{part5.tex}
 
 \end{document}
