@@ -1,79 +1,43 @@
-\section{Ứng dụng và tính phù hợp của các Framework}
-\subsection{Các trường hợp sử dụng React Native}
+\section{Kotlin Multiplatform Mobile (KMM)}
 \paragraph{}
-Về cơ bản, React Native là một framework phát triển ứng dụng đa nền tảng,
-tập trung chủ yếu vào tốc độ phát triển và khả năng chia sẻ các thành phần
-mã nguồn quan trọng giữa iOS và Android. Ưu điểm so sánh của nó là dựa trên
-Java script, giúp các nhà phát triển web muốn chuyển sang phát triển ứng dụng
-di động dễ dàng hơn.
-\paragraph{Các ứng dụng mạng xã hội:}
-  Một  số  ứng  dụng  quy  mô  lớn  như  Facebook,
- Instagram  và  Discord  đã  sử  dụng  React  Native  để  tạo  ra  các  ứng  dụng  phức  tạp,  bao  gồm
- các  thành  phần  có  khả  năng  đồng  bộ  hóa  dữ  liệu  thời  gian  thực  mạnh  mẽ  cũng  như  các  thành  phần  động  của  ứng  dụng.
- Do  khả  năng  tái  sử  dụng  các  phần  UI  và  quản  lý  trạng  thái,  nó  phù  hợp  nhất
- cho  các  ứng  dụng  như  vậy.
-\paragraph{Ứng dụng Thương mại điện tử và Thị trường:}
-Một số lý do khiến các công ty như Shopify và
-Walmart chọn React Native bao gồm: React Native hỗ trợ các thành phần giao diện người dùng (UI) có thể tái sử dụng và nội dung động,
-thanh toán, xác thực và kiểm kê dễ dàng tích hợp với API.
-\paragraph{Tạo bản mẫu và Phát triển MVP:}
-Điều này đặc biệt hữu ích cho bất kỳ công ty khởi nghiệp hoặc doanh nghiệp nào muốn tạo bản mẫu 
-nhanh và kiểm chứng ý tưởng của mình. Nhờ chỉ có một mã cơ sở, các nhà phát triển có thể thấy được 
-lợi ích từ thời gian phát triển ngắn hơn và chi phí thấp hơn, từ đó có thể tạo ra các sản phẩm khả thi tối thiểu 
-(Minimum Viable Product) trong thời gian ngắn hơn.
-\paragraph{Ứng dụng truyền phát trực tuyến nội dung và phương tiện:}
-Một số ứng dụng phương tiện được phát triển bằng React Native bao gồm Netflix và Bloomberg 
-vì nền tảng này dễ sử dụng và xử lý việc hiển thị các tính năng video hoặc âm thanh.
+Kotlin Multiplatform Mobile (KMM) là một triển khai nâng cao được JetBrains tạo ra nhằm đơn giản hóa việc phát triển ứng dụng di động đa nền tảng bằng Kotlin. KMM cho phép các lập trình viên xây dựng lớp logic nghiệp vụ dùng chung cho cả iOS và Android trong khi vẫn có tùy chọn viết mã dành riêng cho từng nền tảng khi cần thiết. 
 \paragraph{}
-Tuy nhiên, việc sử dụng cầu nối JavaScript trong React Native có nghĩa là nó có thể kém phù hợp hơn 
-với các ứng dụng yêu cầu hiệu suất tính toán tối ưu hoặc tích hợp chi tiết với các chức năng gốc của nền tảng.
-\subsection{Các trường hợp sử dụng Kotlin đa nền tảng - KMM tiềm năng}
+Một điểm mạnh khác của KMM là khả năng cho phép lập trình viên quay lại các dự án native và chỉ chuyển đổi những phần mã cần thiết sang KMM mà không cần viết lại toàn bộ ứng dụng. Framework này dựa trên Kotlin với trọng tâm là đa nền tảng, giúp tái sử dụng mã đồng thời tương thích hoàn toàn với Swift và Java. 
 \paragraph{}
-Kotlin đa nền tảng di động (Kotlin Multiplatform Mobile - KMM) phù hợp nhất để sử dụng trong các tình huống cần có 
-logic nghiệp vụ giống hệt nhau trên cả hai hệ điều hành nhưng vẫn đảm bảo giao diện người dùng gốc nhất quán.
-Do đó, giải pháp này rất hiệu quả đối với các tổ chức ưu tiên hiệu suất gốc và khả năng áp dụng vào các nền tảng cụ thể.
-\paragraph{Ứng dụng dành cho doanh nghiệp:}
-Phù hợp nhất với các ứng dụng nghiệp vụ mở rộng cho iPhone cũng như tất cả các nghiệp vụ lớn khác, 
-bởi vì logic nghiệp vụ chỉ cần viết một lần và giao diện người dùng (UI) có thể được thiết kế giống 
-nhau bằng cách sử dụng các tiện ích dành cho cả iPhone và Android, 
-đồng thời tận dụng những yếu tố đồ họa tốt nhất từ cả hai.
-Ví dụ: các ứng dụng yêu cầu xử lý dữ liệu, làm việc hiệu quả hoặc các quy trình nghiệp vụ cụ thể.
-\paragraph{Ứng dụng công nghệ tài chính và ngân hàng:}
-Để được tích hợp vào quy trình phát triển, cùng với các ứng dụng khác, một ứng dụng tài chính có thể cần có hiệu suất cao, 
-bảo mật tốt và được kết nối chặt chẽ với các yếu tố cụ thể của nền tảng, ví dụ như nhận dạng sinh trắc học hoặc lưu trữ được bảo vệ. 
-Đối với lĩnh vực này, KMM phù hợp với hiệu suất ở cấp độ nền tảng và khả năng sử dụng trực tiếp Native API.
-\paragraph{Ứng dụng có Logic Nghiệp vụ Phức tạp:}
-Các ứng dụng có tính toán phức tạp, xử lý dữ liệu
-hoặc triển khai kiến thức, kỹ năng hoặc mô hình cụ thể (chăm sóc sức khỏe, hậu cần)
-tận dụng logic chung trong KMM. Điều này có nghĩa là các thuộc tính của một nền tảng sẽ phản ánh
-các thuộc tính của nền tảng khác, đồng thời tránh được bất kỳ sự ảnh hưởng nào đến hiệu quả.
-\paragraph{Tích hợp Dự án Cũ:}
-KMM được thiết kế để triển khai theo từng bước, lý tưởng cho các doanh nghiệp có ứng dụng cũ muốn chuyển sang đa nền tảng. 
-KMM có thể được triển khai dần dần bởi các nhà phát triển, chia sẻ logic mới cho các tính năng cải tiến mới, đồng thời duy trì mã ứng dụng gốc hiện có.
+KMM đạt hiệu quả cao khi ứng dụng yêu cầu hiệu suất vượt trội và tối ưu hóa theo nền tảng, đồng thời cần sử dụng giao diện người dùng và API native. KMM đang ngày càng phổ biến trong cộng đồng lập trình viên di động nhờ sự hỗ trợ liên tục từ JetBrains và hệ sinh thái ngày càng mở rộng, cùng với lợi thế tối ưu hóa hợp lý giữa tái sử dụng mã và khả năng native của từng nền tảng [24].
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{Picture2.png}
+    \caption{Biểu đồ cho thấy tác động của Kotlin tới các ứng dụng Android [20]}
+    \label{fig:kotlin_impact}
+\end{figure}
+
+\subsection{Các phiên bản Kotlin và quá trình phát triển}
 \paragraph{}
-Điểm hiệu quả của KMM là khi cần hiệu suất và giao diện giống như native, nhưng lại không hiệu quả trong các ứng dụng có giao diện người dùng rất nặng, 
-ưu tiên giao diện người dùng hoặc thường xuyên thay đổi, nơi mà việc phát triển đa nền tảng hoàn toàn là lý tưởng, chẳng hạn như trong React Native hoặc Flutter.
-\subsection{Các trường hợp sử dụng Flutter}
+Kotlin là một ngôn ngữ lập trình kiểu tĩnh được JetBrains phát triển và phát hành lần đầu vào năm 2011. Ngôn ngữ này được thiết kế như một thế hệ tiếp theo thay thế Java, mang lại cú pháp ngắn gọn hơn, độ an toàn cao hơn và hiệu suất phát triển tốt hơn. Kotlin nhận được sự phổ biến rộng rãi trong cộng đồng lập trình Android, và đến năm 2017, Google chính thức công nhận Kotlin là ngôn ngữ hạng nhất cho Android, đánh dấu sự bùng nổ của Kotlin trong phát triển ứng dụng di động. 
 \paragraph{}
-Flutter được biết đến với khả năng triển khai thiết kế hấp dẫn về mặt thị giác, và
-ứng dụng chạy nhanh hơn. Tùy thuộc vào từng dự án, chẳng hạn như những dự án mà thiết kế UI/UX đóng vai trò
-rất quan trọng, kiến trúc dựa trên widget, kết hợp với một công cụ kết xuất khác nhau sẽ phù hợp nhất với
-dự án đó.
-\paragraph{Ứng dụng thiết kế chuyên sâu:}
-Điều làm cho Flutter trở nên lý tưởng là nó được tối ưu hóa cao cho việc sử dụng các hiệu ứng động dành riêng cho khách hàng, 
-chuyển tiếp riêng biệt và chuyển động của giao diện. Các ứng dụng như vậy bao gồm Google Ads và Reflectly, 
-nơi thư viện widget Flutter giúp giảm độ khựng của giao diện người dùng cũng như tăng cường sức hấp dẫn của ứng dụng.
-\paragraph{Khởi nghiệp và Ứng dụng Đa nền tảng: }
-Một lợi thế nữa đi kèm với Flutter đa nền tảng là tiết kiệm thời gian và chi phí trong quá trình phát triển, 
-thế nên đây là lựa chọn tốt hơn cho các công ty khởi nghiệp hoặc bất kỳ công ty nào có ngân sách eo hẹp. 
-Nó cũng rất phù hợp để xây dựng các MJP chuyên biệt nhằm kiểm tra nhu cầu thị trường.
-\paragraph{Ứng dụng Truyền thông và Giải trí:}
-Bất kỳ ứng dụng nào cần được làm mới liên tục, tạo hoạt ảnh hoặc hoạt động trên nhiều nền tảng như phát trực tuyến video hoặc trò chơi đều cần công cụ kết xuất Flutter. 
-Để minh họa điều này, chúng ta có ví dụ thực tế về việc Alibaba đã tận dụng thành công Flutter để xây dựng ứng dụng hoạt động trên nhiều nền tảng với hiệu suất tuyệt vời.
-\paragraph{IoT và Hệ thống nhúng:}
-Nhờ những cập nhật gần đây, bao gồm hỗ trợ Web, Desktop, và giờ đây là cả IoT, Flutter đang dần trở thành một nền tảng được ưa chuộng. Khả năng lập trình
-trang web để chạy trên mọi nền tảng mà vẫn mang lại hiệu suất ấn tượng và tuân thủ
-cùng một mô hình là một trong những lý do tại sao nền tảng này phù hợp với trường hợp sử dụng này.
+Khi nhu cầu đa nền tảng tăng cao, ngôn ngữ này đã mở rộng và giới thiệu Kotlin Multiplatform (KMP). Đến năm 2019, JetBrains công bố Kotlin Multiplatform Mobile (KMM) như một giải pháp chuyên biệt [10] để chia sẻ logic nghiệp vụ giữa iOS và Android trong khi vẫn cho phép lập trình viên xây dựng UI hoàn toàn native. KMM có thể được tích hợp từng bước vào các dự án có sẵn, rất phù hợp cho các doanh nghiệp sử dụng hệ thống legacy. Quá trình phát triển của Kotlin và sự gia tăng sử dụng KMM cho thấy tầm quan trọng ngày càng tăng của Kotlin trong việc xây dựng ứng dụng hiệu suất cao, có khả năng tái sử dụng mã.
+    
+\subsection{Các tính năng chính của KMM}
 \paragraph{}
-Đó là lý do tại sao nếu dự án có thể được phát triển chỉ bằng các thành phần UI và yêu cầu chu kỳ triển khai ứng dụng nhanh chóng, Flutter sẽ hiệu quả hơn; 
-trong khi KMM sẽ hiệu quả hơn nếu cần tích hợp sâu với các tính năng dành riêng cho nền tảng và tối ưu hóa hiệu suất dành riêng cho nền tảng.
+Kotlin Multiplatform Mobile được xây dựng xoay quanh nhiều tính năng nổi bật giúp nó trở thành một framework mạnh mẽ cho phát triển đa nền tảng:
+
+\begin{itemize}
+    \item \textbf{Chia sẻ logic nghiệp vụ:} KMM cho phép lập trình viên viết phần lớn logic ứng dụng bằng Kotlin và tái sử dụng tự động giữa các nền tảng, giúp tránh việc viết lại nhiều lần [12].
+    \item \textbf{UI native linh hoạt:} Khác với các framework khác, KMM chỉ chia sẻ logic nghiệp vụ; phần UI được phát triển riêng bằng native để đảm bảo trải nghiệm người dùng tốt nhất.
+    \item \textbf{Tiếp nhận dần:} KMM có thể được tích hợp từng phần vào dự án native hiện có mà không cần viết lại toàn bộ ứng dụng.
+    \item \textbf{Khả năng tương tác mạnh mẽ:} KMM tương thích trực tiếp với mã Java và Swift, đồng thời có thể sử dụng thư viện và API native.
+    \item \textbf{Công cụ và debug:} JetBrains hỗ trợ toàn diện cho Kotlin thông qua IntelliJ IDEA và Android Studio, bao gồm đầy đủ khả năng debug đa nền tảng [14].
+\end{itemize}
+
+\subsection{Hiệu năng và tối ưu hóa theo nền tảng}
+\paragraph{}
+Kotlin Multiplatform Mobile được xây dựng để mang lại hiệu năng tối ưu trong khi vẫn đảm bảo mức độ trừu tượng phù hợp cho lập trình viên. Do chỉ chia sẻ lớp logic nghiệp vụ và để UI cho nền tảng native xử lý, KMM không gặp các vấn đề về hiệu năng như Flutter hay React Native [12]. 
+\paragraph{}
+Đó là điểm giúp KMM trở nên nổi bật – nó sử dụng khả năng biên dịch sẵn có của Kotlin để tạo ra các tệp thực thi hiệu quả theo từng nền tảng [16]. Đối với Android, mã được viết bằng Kotlin được biên dịch trực tiếp thành mã gốc sử dụng LLVM, mang lại hiệu suất tương đương như trên iOS với Swift. Trong trường hợp của Android, Kotlin chạy trên Java Virtual Machine để đạt hiệu suất tối ưu.
+
+\paragraph{}
+Hơn nữa, KMM cũng cho phép các nhà phát triển thực hiện mã nền tảng hạn chế cho các thao tác phức tạp bao gồm tương tác với phần cứng hoặc các giao diện lập trình ứng dụng của hệ thống, vận hành camera hoặc cấp phát bộ nhớ. Khả năng này giúp đảm bảo rằng các ứng dụng KMM được tinh chỉnh để đáp ứng nhu cầu riêng của từng nền tảng. 
+\paragraph{}
+Theo kinh nghiệm thực tiễn, KMM kết hợp thành công tư duy đa nền tảng với việc áp dụng các tính năng đặc thù của từng nền tảng, cho phép phát triển hiệu quả và đạt được hiệu suất cao [13].
