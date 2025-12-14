@@ -15,7 +15,7 @@ trò thiết yếu đối với bất kỳ tác vụ hiệu năng nào. Trong ph
 mức sử dụng bộ nhớ và tốc độ thực thi của React Native, Flutter và Kotlin Multiplatform.
 \subsection{React Native}
 \paragraph{}
-React Native giao tiếp với các mô-đun gốc thông qua một cầu nối (bridge) bằng JavaScript.
+React Native giao tiếp với các module native thông qua một cầu nối (bridge) bằng JavaScript.
 Điều này cho phép chúng ta phát triển cho các nền tảng khác nhau nhưng lại 
 nảy sinh các điểm nghẽn về hiệu năng, đặc biệt là khi hoạt ảnh hoặc việc tính toán quá nặng.
 \paragraph{}
@@ -74,7 +74,7 @@ Trong Flutter, Dart là ngôn ngữ lập trình, và nó sử dụng Skia rende
 để tạo ra các UI có hiệu năng cao và khả năng tùy biến mạnh mẽ. Bản thân cầu nối
 được loại bỏ trong quá trình biên dịch (Flutter không cần một cầu nối trung gian
 lúc chạy như React Native, vì code Dart được biên dịch thẳng ra mã máy), vì vậy
-nó trở thành mã gốc.
+nó trở thành mã native.
 \paragraph{}
 {\large \textbf{Rendering a List}}
 \begin{minted}[frame=lines, framesep=2mm, baselinestretch=1.2, fontsize=\footnotesize, linenos]{dart}
@@ -193,7 +193,7 @@ cấp mã nguồn hiện đại dùng chung trên nhiều nền tảng mà khôn
 chút nào; Nó cung cấp khả năng tái cấu trúc tự nhiên cho mã đặc thù nền tảng. Phương pháp này
 mang lại lợi ích win-win vì nó có sự cân bằng phù hợp giữa khả năng tái sử dụng và tối ưu hóa
 theo nền tảng, là một ứng viên sáng giá cho các project cần shared functionality nhưng lại cần
-hiệu năng gốc và giao diện mang lại cảm giác quen thuộc cho người dùng.
+hiệu năng native và giao diện mang lại cảm giác quen thuộc cho người dùng.
 \paragraph{}
 \textbf{Hot Reload:}
 \paragraph{}
@@ -248,8 +248,8 @@ thể hoặc làm việc với thư viện được định nghĩa riêng cho n�
 Google là một trong những lý do khiến Flutter nhanh chóng trở nên phổ biến
 như một framework đáng gờm để tạo ra các ứng dụng đa nền tảng, cho phép
 bạn phát huy tối đa khả năng đồng thời đảm bảo ứng dụng vận hành mượt mà nhất.
-Các thuộc tính nổi bật của nó, chẳng hạn như hot reload (văn bản gốc ghi là
-hot extract), khả năng tái sử dụng code to lớn, và một ecosystem phong phú,
+Các thuộc tính nổi bật của nó, chẳng hạn như hot reload,
+ khả năng tái sử dụng code to lớn, và một ecosystem phong phú,
 khiến nó trở thành một sự thay thế xứng đáng cho các lập trình viên có mong muốn
 tạo ra các ứng dụng ổn định và tuyệt đẹp về mặt thẩm mỹ cho iOS và Android.
 \paragraph{}
@@ -294,7 +294,7 @@ tài liệu chi tiết, hướng dẫn, và cũng như các tài nguyên
 do cộng đồng đóng góp.
 \section{Code Maintainability}
 \paragraph{}
-Sự rõ ràng của codebase, tính môđun hoá và khả năng gỡ lỗi đơn giản
+Sự rõ ràng của codebase, tính module hoá và khả năng gỡ lỗi đơn giản
 là những tham số quan trọng của khả năng bảo trì mã nguồn.
 \subsection{React Native}
 \paragraph{}
@@ -304,22 +304,22 @@ cái mới các lập trình viên trở nên dễ dàng hơn.
 Trước hết, React Native sử dụng JavaScript phổ biến, do đó hưởng lợi
 từ sự quen thuộc rộng rãi với nó. Nó làm giảm nhu cầu tiếp nhận của các
 lập trình viên mới (vì rất nhiều lập trình viên đã có kinh nghiệm phát
-triển bằng JavaScript và React Framework). Tính mô-đun hóa thông qua các
+triển bằng JavaScript và React Framework). Tính module hóa thông qua các
 component của React Native thúc đẩy kiến trúc dựa trên component cho
 ứng dụng, nơi mà ứng dụng có thể được tách nhỏ thành các component có thể tái sử dụng.
-Tính mô-đun hóa giúp việc bảo trì dễ dàng hơn vì sự thay đổi ở bất kỳ
+Tính module hóa giúp việc bảo trì dễ dàng hơn vì sự thay đổi ở bất kỳ
 component nào trong số này ít có khả năng ảnh hưởng đến những cái khác.
 Hơn nữa, cơ sở khổng lồ các thư viện và công cụ thông qua npm giải quyết
 các vấn đề điển hình về khả năng bảo trì như quản lý trạng thái và điều hướng.
 \paragraph{}
 \textbf{Nhược điểm:}Việc gỡ lỗi không dễ dàng vì nó liên quan đến một
 JavaScript Native bridge (một cơ chế trung gian giúp mã JavaScript giao
-tiếp được với các mô-đun gốc của hệ điều hành).
+tiếp được với các module native của hệ điều hành).
 \paragraph{}
 React Native gặp một số thách thức về khả năng bảo trì, khiến nó tuy là
 một công cụ tuyệt vời nhưng vẫn tồn tại vài vấn đề về bảo trì.
 JavaScript-Native bridge tạo thêm những điểm gây khó khăn (pain points)
-khi thực hiện gỡ lỗi giữa JavaScript và mã gốc. Các lỗi nằm trong lớp
+khi thực hiện gỡ lỗi giữa JavaScript và mã native. Các lỗi nằm trong lớp
 bridge đặc biệt khó chẩn đoán và sửa chữa. Hơn nữa, bản chất động của
 JavaScript có thể gây ra các runtime error mà không bị phát hiện cho
 đến khi thực thi thực tế, điều này không lý tưởng để đảm bảo độ tin
@@ -349,7 +349,7 @@ riêng biệt cho từng nền tảng. (Java/Swift).
 Kotlin Multiplatform là một trong những thách thức lớn vì
 Kotlin Multiplatform yêu cầu bạn viết UI code đặc thù cho
 một một nền tảng. Mặc dù dùng chung các logic nghiệp vụ, mỗi nền tảng
-phải triển khai UI layer riêng biệt và sử dụng ngôn ngữ gốc,
+phải triển khai UI layer riêng biệt và sử dụng ngôn ngữ native,
 tức là Java/Kotlin cho Android, Swift/Objective-C cho iOS.
 Điều này có thể làm cho codebase trở nên phức tạp hơn,
 và nó có thể đòi hỏi kiến thức chuyên môn về nhiều ngôn ngữ
@@ -360,7 +360,7 @@ nên cần thiết, khiến việc bảo trì trở nên bất tiện.
 \subsection{Flutter}
 \paragraph{}
 \textbf{Ưu điểm:} Khả năng định kiểu tốt của Dart và kiến trúc dựa
-trên Widget của Flutter giúp tạo ra code sạch và thể hiện tính mô đun cao.
+trên Widget của Flutter giúp tạo ra code sạch và thể hiện tính module cao.
 \paragraph{}
 Nhờ được xây dựng trên ngôn ngữ Dart và lấy Widget làm trọng tâm,
 Flutter giúp mã nguồn trở nên dễ bảo trì hơn. Cơ chế định kiểu tĩnh
@@ -368,7 +368,7 @@ Flutter giúp mã nguồn trở nên dễ bảo trì hơn. Cơ chế định ki�
 các lỗi thời gian chạy. Hơn nữa, kiến trúc dựa trên Widget cho phép
 lập trình viên tổ chức ứng dụng như một cấu trúc cây phân cấp, bao
 gồm các component độc lập có khả năng tái sử dụng. Cách tiếp cận
-này giúp cải thiện tính mô-đun hóa, đồng thời làm cho mã nguồn
+này giúp cải thiện tính module hóa, đồng thời làm cho mã nguồn
 trở nên mạch lạc và dễ bảo trì hơn. Ngoài ra, tính năng hot reload
 của Flutter cho phép các lập trình viên nhanh chóng iterate trên UI,
 nhờ đó kiểm tra và tinh chỉnh các sửa đổi UI mà không cần phải khởi
@@ -407,7 +407,7 @@ Quy mô nhỏ hơn React Native và Flutter, nhưng đang tăng trưởng nhanh 
 \textbf{Sự hậu thuẫn:} Lớn mạnh và tích cực từ Google.
 \section{Tích hợp với các Native API}
 \subsection{React Native}
-Các module gốc có thể được viết bằng Java/Objective-C/Swift. Nó có điểm hạn chế là đòi hỏi nỗ
+Các module native có thể được viết bằng Java/Objective-C/Swift. Nó có điểm hạn chế là đòi hỏi nỗ
 lực của lập trình viên để tạo cầu nối giữa JavaScript và mã nguồn.
 \subsection{Kotlin Multiplatform}
 Nó hoạt động trơn tru với Android; còn đối với iOS thì phải phát triển
@@ -417,7 +417,7 @@ bằng Swift/Objective-C.
 \subsection{Flutter}
 Các kênh nền tảng cho phép tích hợp với mã nguồn một cách dễ dàng.
 \paragraph{}
-\textbf{Hạn chế:} Cần viết mã nguồn gốc của mỗi nền tảng cho các tính năng nâng cao.
+\textbf{Hạn chế:} Cần viết mã nguồn native của mỗi nền tảng cho các tính năng nâng cao.
 \section{Thiết kế UI/UX của Ứng dụng}
 \paragraph{}
 Trong trò chơi Tic-Tac-Toe bằng Flutter, UI được thiết kế gọn gàng và

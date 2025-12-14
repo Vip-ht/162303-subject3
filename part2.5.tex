@@ -1,6 +1,6 @@
 \section{Năng suất của lập trình viên}
 \paragraph{}
-RN, Flutter và KMM khác nhau về năng suất của các nhà phát triển. Một trong những lý do chính khiến React Native được đánh giá cao là nó có chu trình phát triển rất nhanh, nhờ khả năng hot reload, giúp các nhà phát triển dễ dàng thấy các thay đổi được áp dụng trên màn hình. Nó cũng có một tập hợp mạnh mẽ các thư viện bên thứ ba giúp tạo ứng dụng nhanh hơn bằng cách bao gồm các thư viện bên thứ ba để triển khai các tính năng liên quan trong một ứng dụng.
+RN, Flutter và KMM khác nhau về năng suất của các nhà phát triển. Một trong những lý do chính khiến React Native được đánh giá cao là nó có chu trình phát triển rất nhanh, nhờ khả năng hot reload, giúp các nhà phát triển dễ dàng thấy các thay đổi được áp dụng trên màn hình. Nó cũng có một tập hợp mạnh mẽ các thư viện bên thứ ba giúp tạo ứng dụng nhanh hơn để triển khai các tính năng liên quan trong một ứng dụng.
 
 \begin{figure}[H]
     \centering
@@ -9,52 +9,52 @@ RN, Flutter và KMM khác nhau về năng suất của các nhà phát triển. 
 \end{figure}
 
 \paragraph{}
-Xu hướng phổ biến của Flutter so với React Native từ năm 2019 đến 2021 được so sánh trong Hình~\ref{fig:react_flutter_trend}, nơi chúng ta thấy sự gia tăng về mức độ phổ biến của Flutter trong khi mức độ phổ biến của React Native vẫn ổn định. Dữ liệu cho thấy việc áp dụng Flutter ngày càng tăng trong phát triển đa nền tảng [18]. 
+Mức độ phổ biến phổ biến của Flutter so với React Native từ năm 2019 đến 2021 được so sánh trong Hình~\ref{fig:react_flutter_trend}, nơi chúng ta thấy sự gia tăng về mức độ phổ biến của Flutter trong khi mức độ phổ biến của React Native vẫn ổn định. Dữ liệu cho thấy việc áp dụng Flutter ngày càng tăng trong phát triển đa nền tảng [18]. 
 
 \paragraph{}
-Tương tự như React Native, Flutter sử dụng tính năng hot reload trong khi framework này có thư viện widget phong phú và hơn thế nữa, giúp có thể tạo ra các thiết kế giao diện người dùng phức tạp. Nó được tài liệu hóa khá đầy đủ, và khả năng tương tác ấn tượng với các IDE như Android Studio và VS Code cũng cải thiện hiệu quả. Tuy nhiên, một điểm quan trọng có thể tốn thêm thời gian cho các nhà phát triển, đặc biệt là những người chưa quen với ngôn ngữ Dart của Flutter, là khả năng học dễ dàng
+Tương tự như React Native, Flutter sử dụng tính năng hot reload trong khi framework này có thư viện widget phong phú và hơn thế nữa, giúp có thể tạo ra các thiết kế giao diện người dùng phức tạp. Nó được tài liệu hóa khá đầy đủ, và khả năng tương tác ấn tượng với các IDE như Android Studio và VS Code cũng cải thiện hiệu quả. Tuy nhiên, một điểm quan trọng có thể tốn thêm thời gian cho các nhà phát triển, đặc biệt là những người chưa quen với ngôn ngữ Dart của Flutter, là độ khó khi tiếp cận.
 
 \paragraph{}
-KMM chủ yếu giải quyết việc chia sẻ logic nghiệp vụ trong khi để giao diện người dùng logic nghiệp vụ vẫn giữ nguyên bản gốc trên cả Android và iOS. Tuy nhiên, nó chưa hoàn toàn thích ứng cho thiết kế giao diện đa nền tảng và vì lý do đó làm năng suất kém hơn nhiều so với trường hợp của React Native và Flutter. Trong thực tế, các nhóm vẫn phải viết một mã giao diện người dùng hoàn toàn khác cho mỗi nền tảng, điều này mặc dù có thể giúp rút ngắn thời gian phát triển một chút nhưng lại khiến người dùng cuối cảm thấy rằng những gì họ đang sử dụng là bản gốc của nền tảng.
+KMM chủ yếu giải quyết việc chia sẻ logic nghiệp vụ trong khi để phần giao diện người dùng vẫn giữ nguyên native trên cả Android và iOS. Vậy nên, nó chưa hoàn toàn thích ứng cho thiết kế giao diện đa nền tảng bởi vì lý do đó làm năng suất kém hơn nhiều so với của React Native và Flutter. Trong thực tế, các nhóm vẫn phải viết một mã giao diện người dùng hoàn toàn khác cho mỗi nền tảng, điều này mặc dù có thể giúp rút ngắn thời gian phát triển một chút nhưng lại khiến người dùng cuối cảm thấy rằng những gì họ đang sử dụng không được tương đồng giữa các nền tảng.
 
 \paragraph{}
-Tóm lại, có thể nói rằng, mặc dù React Native và Flutter được đánh giá cao về việc tạo ra các ứng dụng đa nền tảng, KMM lại áp dụng cách tiếp cận ngược lại và tập trung vào tính chất giống bản gốc, bỏ qua thời gian cần để tạo ra các ứng dụng.
+Tóm lại, có thể nói rằng, mặc dù React Native và Flutter được đánh giá cao về việc tạo ra các ứng dụng đa nền tảng, KMM lại áp dụng cách tiếp cận ngược lại và tập trung vào tính chất sát với ứng dụng native, bỏ qua vấn đề thời gian khi tạo ra các ứng dụng.
 
 \subsection{Benchmark hiệu năng}
 \paragraph{}
-Về mặt hiệu suất, Flutter ấn tượng hơn React Native và, ở một số khía cạnh, có thể cạnh tranh với KMM. Bộ máy render Skia trực tiếp phủ lên giao diện người dùng mà không cần gọi đến các thành phần gốc, hoạt ảnh mượt mà hơn và hiệu suất đa nền tảng được cải thiện. Kiến trúc này cho phép hiệu suất gần như gốc ngay cả với giao diện người dùng lớn và phức tạp.
+Về mặt hiệu năng, Flutter ấn tượng hơn React Native và, ở một số khía cạnh, có thể cạnh tranh với KMM. Render engine Skia trực tiếp phủ lên giao diện người dùng mà không cần gọi đến các thành phần native, animation mượt mà hơn và hiệu năng đa nền tảng được cải thiện. Kiến trúc này cho phép hiệu năng gần như native ngay cả với giao diện người dùng lớn và phức tạp.
 
 \paragraph{}
-Một nhược điểm lớn của React Native là nó sử dụng cầu nối JavaScript để mã JavaScript tương tác với các thành phần gốc, điều này có thể làm chậm ở một số khu vực như hoạt ảnh hoặc tính toán. Tuy nhiên, các cải tiến hiện tại như React Native Fabric được ra đời nhằm giảm thiểu điều này.
+Một nhược điểm lớn của React Native là nó sử dụng cầu nối JavaScript để mã JavaScript tương tác với các thành phần native, điều này có thể làm chậm ở một số khía cạnh như animation hoặc tính toán. Tuy nhiên, các cải tiến hiện tại như React Native Fabric được ra đời nhằm giảm thiểu điều này.
 
 \paragraph{}
-KMM cung cấp hiệu suất gốc thực sự vì nó được biên dịch từ logic nghiệp vụ chung của nền tảng thành các tệp nhị phân riêng cho từng nền tảng: Android sử dụng JVM và iOS sử dụng LLVM. Vì KMM dựa vào các thành phần giao diện người dùng của nền tảng, nó có hiệu suất tốt nhất cho các ứng dụng có tần suất tương tác cao của người dùng và sử dụng tài nguyên nhiều.
+KMM cung cấp hiệu năng native thực sự vì nó được biên dịch từ logic nghiệp vụ chung của framework thành các tệp nhị phân riêng cho từng nền tảng: Android sử dụng JVM và iOS sử dụng LLVM. Vì KMM dựa vào các thành phần giao diện người dùng của nền tảng, nó có hiệu năng tốt nhất cho các ứng dụng có tần suất tương tác cao của người dùng và sử dụng tài nguyên nhiều.
 
 \paragraph{}
-Tóm lại, kết quả cho thấy Flutter cung cấp hiệu suất tốt hơn cho các ứng dụng phụ thuộc nhiều vào giao diện người dùng. Khi nói đến các ứng dụng có thể liên quan đến các tác vụ tính toán phức tạp hoặc yêu cầu tích hợp sâu với các thành phần gốc, KMM là lựa chọn tốt nhất, còn React Native ở mức trung bình và có thể xử lý phát triển ứng dụng đa nền tảng vừa phải mà vẫn duy trì hiệu suất tốt.
+Tóm lại, kết quả cho thấy Flutter cung cấp hiệu năng tốt hơn cho các ứng dụng phụ thuộc nhiều vào giao diện người dùng. Khi nói đến các ứng dụng có thể liên quan đến các tác vụ tính toán phức tạp hoặc yêu cầu tích hợp sâu với các thành phần native, KMM là lựa chọn tốt nhất, còn React Native ở mức trung bình và có thể xử lý phát triển ứng dụng đa nền tảng vừa phải mà vẫn duy trì hiệu năng tốt.
 
 \subsection{Tương tác với Native API}
 \paragraph{}
-Cả ba framework đều cho phép bạn tương tác với các API gốc và mặc dù chúng có thể có sự khác biệt nhỏ về cách thực hiện, nhưng một số có thể dễ sử dụng hơn các framework khác. React Native sử dụng cầu nối JavaScript để gọi các API gốc khác, cho phép sử dụng các tính năng của thiết bị. Nhưng đối với các chức năng tùy chỉnh, các nhà phát triển có thể cần tạo các module gốc riêng biệt theo nền tảng bằng Java hoặc Swift, điều này hơi phức tạp.
+Cả ba framework đều cho phép bạn tương tác với các native API và mặc dù chúng có thể có sự khác biệt nhỏ về cách thực hiện, nhưng một số có thể dễ sử dụng hơn các framework khác. React Native sử dụng cầu nối JavaScript để gọi các native API khác, cho phép sử dụng các tính năng của thiết bị. Nhưng đối với các chức năng tùy chỉnh, các nhà phát triển có thể cần tạo các module native riêng biệt theo nền tảng bằng Java hoặc Swift, điều này hơi phức tạp.
 
 \paragraph{}
-Platform Channels giúp Flutter dễ dàng giao tiếp với mã gốc nhờ việc sử dụng Dart. Điều này cũng làm cho việc tích hợp các API hoặc chức năng gốc như GPS, camera và cảm biến trở nên gọn gàng và hiệu quả trong quá trình phát triển. Thêm vào đó, Flutter có nhiều plugin sẵn có giúp giảm thiểu nhu cầu phát triển gốc riêng biệt trong hầu hết các trường hợp.
+Platform Channels giúp Flutter dễ dàng giao tiếp với mã native nhờ việc sử dụng Dart. Điều này cũng làm cho việc tích hợp các API hoặc chức năng native như GPS, camera và cảm biến trở nên gọn gàng và hiệu quả trong quá trình phát triển. Thêm vào đó, Flutter có nhiều plugin sẵn có giúp giảm thiểu nhu cầu ngôn ngữ native riêng biệt trong hầu hết các trường hợp.
 
 \paragraph{}
-Về khả năng mở rộng, KMM gần gũi với phát triển gốc hơn về việc truy cập giao diện API và cung cấp khả năng giao tiếp trực tiếp với các API gốc mà không qua các lớp cầu nối. Nó cho phép gọi các API gốc từ mã Kotlin dùng chung hoặc viết mã riêng cho từng nền tảng cho các mục đích nâng cao. Điều này làm cho KMM đặc biệt hiệu quả khi phát triển các ứng dụng cần phụ thuộc nhiều vào chức năng gốc nhưng vẫn có thể chia sẻ logic nghiệp vụ.
+Về khả năng mở rộng, KMM gần gũi với ngôn ngữ native hơn về việc truy cập giao diện API và cung cấp khả năng giao tiếp trực tiếp với các native API mà không qua các lớp cầu nối. Nó cho phép gọi các native API từ mã Kotlin dùng chung hoặc viết mã riêng cho từng nền tảng cho các mục đích nâng cao. Điều này làm cho KMM đặc biệt hiệu quả khi phát triển các ứng dụng cần phụ thuộc nhiều vào chức năng native nhưng vẫn có thể chia sẻ logic nghiệp vụ.
 
 \paragraph{}
-Nhìn chung, về đánh giá tích hợp với các API gốc, KMM mang lại sự dễ dàng hơn so với hai framework còn lại, trong khi Flutter và React Native đủ đáp ứng cho hầu hết nhu cầu với trải nghiệm có phần tốt hơn, nhưng không đáng kể, thông qua Platform Channels.
+Nhìn chung, về đánh giá tích hợp với các native API, KMM mang lại sự dễ dàng hơn so với hai framework còn lại, trong khi Flutter và React Native đủ đáp ứng cho hầu hết nhu cầu với trải nghiệm có phần tốt hơn, nhưng không đáng kể, thông qua Platform Channels.
 
 \subsection{Hỗ trợ từ cộng đồng và doanh nghiệp}
 \paragraph{}
-React Native, các thành phần và các phụ thuộc của nó đã được phát triển từ năm 2015 và nhận được sự hỗ trợ đáng kể trong cộng đồng nhà phát triển. Nó có một kho thư viện bên thứ ba lớn, nhiều hướng dẫn và diễn đàn như GitHub và Stack Overflow. Nhiều công ty, bao gồm cả Facebook và Instagram, những người đã tạo ra nó, cũng như Airbnb, đã triển khai sử dụng React Native trong sản xuất.
+React Native, các thành phần và các dependency của nó đã được phát triển từ năm 2015 và nhận được sự hỗ trợ đáng kể trong cộng đồng nhà phát triển. Nó có một kho thư viện bên thứ ba lớn, nhiều hướng dẫn và diễn đàn như GitHub và Stack Overflow. Nhiều công ty, bao gồm cả Facebook và Instagram, những người đã tạo ra nó, cũng như Airbnb, đã triển khai sử dụng React Native trong sản phẩm.
 
 \paragraph{}
-Google, nhà tài trợ, đã hỗ trợ Flutter, một nền tảng tương đối mới được ra đời vào năm 2017 nhưng đã phát triển nhanh chóng. Nó có cơ sở người dùng tốt và các công ty như Alibaba, BMW, eBay sử dụng và dựa vào nó. Hệ sinh thái vẫn đang mở rộng, và các plugin cùng công cụ được thu thập trong thư viện pub.dev.
+Google đã hỗ trợ Flutter từ một nền tảng tương đối mới được ra đời vào năm 2017 phát triển nhanh chóng. Nó có cơ sở người dùng tốt và các công ty như Alibaba, BMW, eBay sử dụng và dựa vào nó. Hệ sinh thái vẫn đang mở rộng, và các plugin cùng công cụ được thu thập trong thư viện pub.dev.
 
 \paragraph{}
-Macro-media tương đối lâu đời hơn và chỉ nhắm đến những người cần chia sẻ mã mà không viết chương trình bằng các ngôn ngữ khác nhau của Macro-media. Họ có số lượng cộng đồng khá nhỏ 21 nhưng hoạt động tích cực và dần tăng so với React Native và Flutter nhờ sự hỗ trợ của JetBrains. IDE chính thức của cả hai nền tảng, IntelliJ IDEA và Android Studio, cung cấp sự hỗ trợ mạnh mẽ cho ngôn ngữ, thêm vào đó, sự phổ biến của Kotlin trong cộng đồng phát triển Android cũng có lợi cho KMM.
+Macro-media tương đối lâu đời hơn và chỉ nhắm đến những người cần chia sẻ mã mà không viết chương trình bằng các ngôn ngữ khác nhau của Macro-media. Họ có số lượng cộng đồng khá nhỏ nhưng hoạt động tích cực và dần tăng so với React Native và Flutter nhờ sự hỗ trợ của JetBrains. IDE chính thức của cả hai nền tảng, IntelliJ IDEA và Android Studio, cung cấp sự hỗ trợ mạnh mẽ cho ngôn ngữ, thêm vào đó, sự phổ biến của Kotlin trong cộng đồng phát triển Android cũng có lợi cho KMM.
 
 \paragraph{}
-Do đó, khi xét đến cộng đồng mạnh và khả năng truy cập thư viện, công cụ và hỗ trợ, các dự án nên được phát triển bằng React Native và Flutter, trong khi các tổ chức yêu cầu mô phỏng ứng dụng gốc mạnh mẽ hơn và hiệu suất tối đa với hỗ trợ cộng đồng hạn chế nhưng ổn định, nên sử dụng KMM.
+Do đó, khi xét đến cộng đồng mạnh và khả năng truy cập thư viện, công cụ và hỗ trợ, các dự án nên được phát triển bằng React Native và Flutter. Trong khi đó, các tổ chức yêu cầu mô phỏng ứng dụng native mạnh mẽ hơn và hiệu năng tối đa với hỗ trợ cộng đồng hạn chế nhưng ổn định, nên sử dụng KMM.

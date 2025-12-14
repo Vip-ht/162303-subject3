@@ -4,7 +4,7 @@ Kotlin Multiplatform Mobile (KMM) là một triển khai nâng cao được JetB
 \paragraph{}
 Một điểm mạnh khác của KMM là khả năng cho phép lập trình viên quay lại các dự án native và chỉ chuyển đổi những phần mã cần thiết sang KMM mà không cần viết lại toàn bộ ứng dụng. Framework này dựa trên Kotlin với trọng tâm là đa nền tảng, giúp tái sử dụng mã đồng thời tương thích hoàn toàn với Swift và Java. 
 \paragraph{}
-KMM đạt hiệu quả cao khi ứng dụng yêu cầu hiệu suất vượt trội và tối ưu hóa theo nền tảng, đồng thời cần sử dụng giao diện người dùng và API native. KMM đang ngày càng phổ biến trong cộng đồng lập trình viên di động nhờ sự hỗ trợ liên tục từ JetBrains và hệ sinh thái ngày càng mở rộng, cùng với lợi thế tối ưu hóa hợp lý giữa tái sử dụng mã và khả năng native của từng nền tảng [24].
+KMM đạt hiệu quả cao khi ứng dụng yêu cầu hiệu năng vượt trội và tối ưu hóa theo nền tảng, đồng thời cần sử dụng giao diện người dùng và API native. KMM đang ngày càng phổ biến trong cộng đồng lập trình viên di động nhờ sự hỗ trợ liên tục từ JetBrains và hệ sinh thái ngày càng mở rộng, cùng với lợi thế tối ưu hóa hợp lý giữa tái sử dụng mã và khả năng native của từng nền tảng [24].
 
 \begin{figure}[H]
     \centering
@@ -15,9 +15,9 @@ KMM đạt hiệu quả cao khi ứng dụng yêu cầu hiệu suất vượt tr
 
 \subsection{Các phiên bản Kotlin và quá trình phát triển}
 \paragraph{}
-Kotlin là một ngôn ngữ lập trình kiểu tĩnh được JetBrains phát triển và phát hành lần đầu vào năm 2011. Ngôn ngữ này được thiết kế như một thế hệ tiếp theo thay thế Java, mang lại cú pháp ngắn gọn hơn, độ an toàn cao hơn và hiệu suất phát triển tốt hơn. Kotlin nhận được sự phổ biến rộng rãi trong cộng đồng lập trình Android, và đến năm 2017, Google chính thức công nhận Kotlin là ngôn ngữ hạng nhất cho Android, đánh dấu sự bùng nổ của Kotlin trong phát triển ứng dụng di động. 
+Kotlin là một ngôn ngữ lập trình kiểu tĩnh được JetBrains phát triển và phát hành lần đầu vào năm 2011. Ngôn ngữ này được thiết kế như một thế hệ tiếp theo thay thế Java, mang lại cú pháp ngắn gọn hơn, độ an toàn cao hơn và hiệu năng phát triển tốt hơn. Kotlin nhận được sự phổ biến rộng rãi trong cộng đồng lập trình Android, và đến năm 2017, Google chính thức công nhận Kotlin là ngôn ngữ hạng nhất cho Android, đánh dấu sự bùng nổ của Kotlin trong phát triển ứng dụng di động. 
 \paragraph{}
-Khi nhu cầu đa nền tảng tăng cao, ngôn ngữ này đã mở rộng và giới thiệu Kotlin Multiplatform (KMP). Đến năm 2019, JetBrains công bố Kotlin Multiplatform Mobile (KMM) như một giải pháp chuyên biệt [10] để chia sẻ logic nghiệp vụ giữa iOS và Android trong khi vẫn cho phép lập trình viên xây dựng UI hoàn toàn native. KMM có thể được tích hợp từng bước vào các dự án có sẵn, rất phù hợp cho các doanh nghiệp sử dụng hệ thống legacy. Quá trình phát triển của Kotlin và sự gia tăng sử dụng KMM cho thấy tầm quan trọng ngày càng tăng của Kotlin trong việc xây dựng ứng dụng hiệu suất cao, có khả năng tái sử dụng mã.
+Khi nhu cầu đa nền tảng tăng cao, ngôn ngữ này đã mở rộng và giới thiệu Kotlin Multiplatform (KMP). Đến năm 2019, JetBrains công bố Kotlin Multiplatform Mobile (KMM) như một giải pháp chuyên biệt [10] để chia sẻ logic nghiệp vụ giữa iOS và Android trong khi vẫn cho phép lập trình viên xây dựng UI hoàn toàn native. KMM có thể được tích hợp từng bước vào các dự án có sẵn, rất phù hợp cho các doanh nghiệp sử dụng hệ thống cũ kỹ. Quá trình phát triển của Kotlin và sự gia tăng sử dụng KMM cho thấy tầm quan trọng ngày càng tăng của Kotlin trong việc xây dựng ứng dụng hiệu năng cao, có khả năng tái sử dụng mã.
     
 \subsection{Các tính năng chính của KMM}
 \paragraph{}
@@ -35,9 +35,9 @@ Kotlin Multiplatform Mobile được xây dựng xoay quanh nhiều tính năng 
 \paragraph{}
 Kotlin Multiplatform Mobile được xây dựng để mang lại hiệu năng tối ưu trong khi vẫn đảm bảo mức độ trừu tượng phù hợp cho lập trình viên. Do chỉ chia sẻ lớp logic nghiệp vụ và để UI cho nền tảng native xử lý, KMM không gặp các vấn đề về hiệu năng như Flutter hay React Native [12]. 
 \paragraph{}
-Đó là điểm giúp KMM trở nên nổi bật – nó sử dụng khả năng biên dịch sẵn có của Kotlin để tạo ra các tệp thực thi hiệu quả theo từng nền tảng [16]. Đối với Android, mã được viết bằng Kotlin được biên dịch trực tiếp thành mã gốc sử dụng LLVM, mang lại hiệu suất tương đương như trên iOS với Swift. Trong trường hợp của Android, Kotlin chạy trên Java Virtual Machine để đạt hiệu suất tối ưu.
+Đó là điểm giúp KMM trở nên nổi bật – nó sử dụng khả năng biên dịch sẵn có của Kotlin để tạo ra các tệp thực thi hiệu quả theo từng nền tảng [16]. Đối với iOS, mã được viết bằng Kotlin được biên dịch trực tiếp thành mã native sử dụng LLVM(Low Level Virtual Machine), mang lại hiệu năng tương đương như native. Trong trường hợp của Android, Kotlin chạy trên Java Virtual Machine để đạt hiệu năng tối ưu.
 
 \paragraph{}
-Hơn nữa, KMM cũng cho phép các nhà phát triển thực hiện mã nền tảng hạn chế cho các thao tác phức tạp bao gồm tương tác với phần cứng hoặc các giao diện lập trình ứng dụng của hệ thống, vận hành camera hoặc cấp phát bộ nhớ. Khả năng này giúp đảm bảo rằng các ứng dụng KMM được tinh chỉnh để đáp ứng nhu cầu riêng của từng nền tảng. 
+Hơn nữa, KMM cũng cho phép các nhà phát triển thực hiện mã đặc trưng của nền tảng cho các thao tác phức tạp bao gồm tương tác với phần cứng hoặc các giao diện lập trình ứng dụng của hệ thống, vận hành camera hoặc cấp phát bộ nhớ. Khả năng này giúp đảm bảo rằng các ứng dụng KMM được tinh chỉnh để đáp ứng nhu cầu riêng của từng nền tảng. 
 \paragraph{}
-Theo kinh nghiệm thực tiễn, KMM kết hợp thành công tư duy đa nền tảng với việc áp dụng các tính năng đặc thù của từng nền tảng, cho phép phát triển hiệu quả và đạt được hiệu suất cao [13].
+Theo kinh nghiệm thực tiễn, KMM kết hợp thành công tư duy đa nền tảng với việc áp dụng các tính năng đặc thù của từng nền tảng, cho phép phát triển hiệu quả và đạt được hiệu năng cao [13].

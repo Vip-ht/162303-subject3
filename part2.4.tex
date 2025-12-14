@@ -2,7 +2,7 @@
 \paragraph{}
 Google đã phát hành Flutter, một bộ công cụ giao diện người dùng tuyệt vời mà họ phát triển để xây dựng ứng dụng đa nền tảng bằng cách sử dụng một cơ sở mã duy nhất. Điều này làm cho kiến trúc dựa trên widget của nó thực sự nhất quán và mượt mà hơn trên Android, iOS, web và thậm chí cả các thiết bị máy tính để bàn. 
 \paragraph{}
-Tính năng hot reload là một trong những điểm mạnh chính mà Flutter mang lại cho các nhà phát triển của họ, vì nó cho phép họ nhìn thấy các thay đổi ngay lập tức, giúp việc phát triển trở nên nhanh chóng. Hơn nữa, Flutter cung cấp đồ họa hiệu suất cao và hoạt ảnh mượt mà nhờ vào công cụ render Skia. 
+Tính năng hot reload là một trong những điểm mạnh chính mà Flutter mang lại cho các nhà phát triển của họ, vì nó cho phép họ nhìn thấy các thay đổi ngay lập tức, giúp việc phát triển trở nên nhanh chóng. Hơn nữa, Flutter cung cấp đồ họa hiệu năng cao và animation mượt mà nhờ vào công cụ render Skia. 
 \paragraph{}
 Flutter, với hệ sinh thái plugin ngày càng phát triển, cộng đồng hỗ trợ mạnh mẽ, cùng với sự hỗ trợ từ Google, tiếp tục được chú ý nhiều hơn như một framework tuyệt vời cho phát triển ứng dụng hiện đại.
 
@@ -21,9 +21,9 @@ Flutter sử dụng ngôn ngữ Dart, cũng do Google phát triển, đặc trư
 \end{figure}
 
 \paragraph{}
-Flutter có những ưu điểm như hot reload, phát triển nhanh hơn, dễ sử dụng, v.v., như được minh họa trong Hình~\ref{fig:loi_ich_flutter}, do đó làm cho Flutter trở thành một lựa chọn tốt cho thiết kế giao diện người dùng đa nền tảng. (Shevtsiv \& Striuk, 2021)  
+Flutter có những ưu điểm như hot reload, phát triển nhanh hơn, dễ sử dụng, v.v., như được minh họa trong Hình~\ref{fig:loi_ich_flutter}, do đó làm cho Flutter trở thành một lựa chọn tốt cho thiết kế giao diện người dùng đa nền tảng. [21]  
 \paragraph{}
-Flutter cung cấp một bộ widget gốc tốt có thể trừu tượng hóa cho đa nền tảng và với bố cục thích ứng, không phụ thuộc vào widget nền tảng. Điều này khiến nó rất phù hợp để tạo ra các thiết kế bố cục chính xác cho cả Android, iOS, cũng như các thiết bị khác. Nhờ Google img2img, Flutter và Dart đang được sử dụng ngày càng nhiều cho phát triển đa nền tảng với quá trình phát triển rất mượt mà và hiệu suất gần giống như native.
+Flutter cung cấp một bộ widget tốt có thể trừu tượng hóa cho đa nền tảng và với bố cục thích ứng, không phụ thuộc vào widget nền tảng. Điều này khiến nó rất phù hợp để tạo ra các thiết kế bố cục chính xác cho cả Android, iOS, cũng như các thiết bị khác. Nhờ Google img2img, Flutter và Dart đang được sử dụng ngày càng nhiều cho phát triển đa nền tảng với quá trình phát triển rất mượt mà và hiệu năng gần giống như native.
 
 \subsection{Lợi ích của Flutter trong việc tạo giao diện người dùng}
 \paragraph{}
@@ -38,9 +38,9 @@ Flutter được thiết kế đặc biệt để lập trình viên xây dựng
     \caption{Kiến trúc dựa trên Widget của Flutter [18]}\label{fig:kien_truc_flutter}
 \end{figure}
 
-Hình~\ref{fig:kien_truc_flutter} này cho thấy Kiến trúc Dựa trên Widget của Flutter bao gồm ba lớp: Lớp Ứng dụng (logic mô hình và kinh doanh với Blocs), Lớp Miền (kho dữ liệu) chịu trách nhiệm về luồng dữ liệu, Lớp Dữ liệu (API bên ngoài, Firebase trong trường hợp này và Hive). 
+Hình~\ref{fig:kien_truc_flutter} này cho thấy Kiến trúc Dựa trên Widget của Flutter bao gồm ba lớp: Lớp Ứng dụng (logic đối tượng/nghiệp vụ với Blocs), Lớp Miền (kho dữ liệu) chịu trách nhiệm về luồng dữ liệu, Lớp Dữ liệu (API bên ngoài, Firebase(trong trường hợp này) và Hive). 
 \paragraph{}
-\textbf{Hiển thị Pixel-Chính xác:} Flutter sử dụng động cơ render Skia tạo ra giao diện người dùng trực quan và chất lượng cao trên các thiết bị và nền tảng [24]. Các nhà thiết kế và lập trình viên có thể tạo ra kiểu giao diện và cảm giác mà họ muốn mà không bị ràng buộc bởi giao diện và cảm giác của một bộ widget GUI cụ thể.
+\textbf{Hiển thị Pixel-Chính xác:} Skia - engine render của Flutter - tạo ra giao diện người dùng trực quan và chất lượng cao trên các thiết bị và nền tảng [24]. Các nhà thiết kế và lập trình viên có thể tạo ra trải nghiệm họ muốn mà không bị ràng buộc bởi một bộ widget GUI cụ thể.
 
 \begin{figure}[H]
     \centering
@@ -50,24 +50,24 @@ Hình~\ref{fig:kien_truc_flutter} này cho thấy Kiến trúc Dựa trên Widge
 
 Hình~\ref{fig:flutter_framework} cho thấy kiến trúc của framework Flutter, với cấu trúc theo lớp — framework Dart, engine render và các tích hợp theo nền tảng cụ thể. 
 \paragraph{}
-\textbf{Tính nhất quán đa nền tảng:} Flutter hứa hẹn sự thống nhất trên các nền tảng khác nhau như Android và iOS cho một giao diện người dùng tương tự và cơ hội để tránh việc tốn nhiều thời gian đảm bảo chúng luôn nhất quán [25].
+\textbf{Tính nhất quán đa nền tảng:} Flutter mang đến hẹn sự thống nhất trên các nền tảng khác nhau như Android và iOS cho một giao diện người dùng tương tự và cơ hội để tránh việc tốn nhiều thời gian đảm bảo chúng luôn nhất quán [25].
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{Picture6.png}
     \caption{Mô hình hoá Flutter đa nền tảng [10]}\label{fig:flutter_da_nen_tang}
 \end{figure}
-Như được thấy trong hình~\ref{fig:flutter_da_nen_tang}, Flutter cung cấp nhiều lợi thế cho phát triển đa nền tảng: đầu tiên, cơ sở mã nhanh, nhẹ, hỗ trợ hot reload, nhanh và nhiều tùy chọn tùy chỉnh phong phú. 
+Như được thấy trong hình~\ref{fig:flutter_da_nen_tang}, Flutter cung cấp nhiều lợi thế cho phát triển đa nền tảng: cơ sở mã nhanh, nhẹ, nhất quán, hỗ trợ hot reload cùng với nhiều tùy chọn tùy chỉnh nhanh và phong phú. 
 \paragraph{}
-\textbf{Hoạt ảnh tùy chỉnh:} Flutter có một lớp hoạt ảnh giúp người dùng tạo ra nhiều hoạt ảnh và chuyển đổi khác nhau cho ứng dụng của họ, do đó, luồng trong ứng dụng được quản lý tốt. 
+\textbf{Animation tùy chỉnh:} Flutter có một lớp animation giúp người dùng tạo ra nhiều animation và transition khác nhau cho ứng dụng của họ, do đó, luồng trong ứng dụng được quản lý tốt. 
 \paragraph{}
-\textbf{Thiết kế đáp ứng:} Hệ thống bố cục linh hoạt của Flutter mở rộng khả năng phát triển giao diện người dùng mẫu, có thể đáp ứng linh hoạt với nhiều kích thước và mật độ màn hình khác nhau. Những tính năng này khiến Flutter trở thành nền tảng được ưa chuộng cho các nhà phát triển muốn mang đến những ứng dụng chất lượng cao, giàu giá trị thẩm mỹ, được ra mắt trong thời gian ngắn nhất có thể.
+\textbf{Thiết kế đáp ứng:} Hệ thống bố cục linh hoạt của Flutter cho phép mở rộng khả năng phát triển giao diện người dùng mẫu, có thể đáp ứng linh hoạt với nhiều kích thước và mật độ màn hình khác nhau. Những tính năng này khiến Flutter trở thành nền tảng được ưa chuộng cho các nhà phát triển muốn mang đến những ứng dụng chất lượng cao, giàu giá trị thẩm mỹ, được ra mắt trong thời gian ngắn nhất có thể.
 
 \subsection{Hỗ trợ cộng đồng và hệ sinh thái}
 \paragraph{}
 Flutter có một cộng đồng trẻ và rất năng động, được đảm bảo nhờ sự tham gia của Google. Điều này làm cho nó khá mạnh mẽ, khiến mọi người sử dụng nó như một framework đa nền tảng [30]. 
 \paragraph{}
-Cộng đồng nhà phát triển năng động: Nó cũng có một trong những hệ sinh thái nhà phát triển lớn nhất đối với bất kỳ framework đa nền tảng nào trên thị trường. Các cộng đồng này cung cấp thư viện plugin và tài nguyên từ những người đóng góp để hỗ trợ và làm phong phú việc phát triển [14]. Có hàng ngàn chủ đề và câu trả lời trên GitHub và Stack Overflow liên quan đến các vấn đề và giải pháp về Flutter.
+\textbf{Cộng đồng nhà phát triển năng động}: Flutter cũng có một trong những hệ sinh thái nhà phát triển lớn nhất đối với bất kỳ framework đa nền tảng nào trên thị trường. Các cộng đồng này cung cấp thư viện plugin và tài nguyên từ những người đóng góp để hỗ trợ và làm phong phú việc phát triển [14]. Có hàng ngàn chủ đề và câu trả lời trên GitHub và Stack Overflow liên quan đến các vấn đề và giải pháp về Flutter.
 
 \paragraph{}
 \textbf{Thư viện Plugin phong phú:} Flutter có danh sách mười tám plugin tự phát triển và hàng ngàn gói khác, giúp dễ dàng thêm các chức năng như GPS, Thanh toán và truy cập Camera. Chúng được cung cấp bởi kho gói có tên là Pub.dev, nơi cung cấp đa dạng công cụ để đáp ứng các yêu cầu khác nhau của ứng dụng. 
@@ -78,7 +78,7 @@ Cộng đồng nhà phát triển năng động: Nó cũng có một trong nhữ
 \textbf{Tài liệu toàn diện:} Tài liệu do Flutter cung cấp dễ theo dõi và cung cấp mọi chi tiết mà một nhà phát triển cần để sử dụng các tính năng của Flutter [09]. 
 
 \paragraph{}
-\textbf{Sự chấp nhận bởi các nhà lãnh đạo ngành:} Các doanh nhân và nhà phát triển đã áp dụng Flutter; ví dụ, Alibaba, eBay và BMW đã áp dụng nó để chứng minh rằng nó có khả năng xử lý các ứng dụng quy mô lớn, sẵn sàng cho sản xuất. 
+\textbf{Sự chấp nhận bởi các ngành công nghiệp:} Các doanh nghiệp và nhà phát triển đã công nhận Flutter, ví dụ: Alibaba, eBay và BMW. Điều này chứng minh rằng nó có khả năng xử lý các ứng dụng quy mô lớn, đạt cấp độ sản phẩm. 
 
 \paragraph{}
 Cộng đồng Flutter là một môi trường phong phú với sự hỗ trợ liên tục, phù hợp với nhu cầu và kỳ vọng của các nhà phát triển và tổ chức trong phát triển ứng dụng đa nền tảng.

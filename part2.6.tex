@@ -26,12 +26,12 @@ Một số ứng dụng phương tiện được phát triển bằng React Nati
 vì nền tảng này dễ sử dụng và xử lý việc hiển thị các tính năng video hoặc âm thanh.
 \paragraph{}
 Tuy nhiên, việc sử dụng cầu nối JavaScript trong React Native có nghĩa là nó có thể kém phù hợp hơn 
-với các ứng dụng yêu cầu hiệu suất tính toán tối ưu hoặc tích hợp chi tiết với các chức năng gốc của nền tảng.
+với các ứng dụng yêu cầu hiệu năng tính toán tối ưu hoặc tích hợp chi tiết với các chức năng native của nền tảng.
 \subsection{Các trường hợp sử dụng Kotlin đa nền tảng - KMM tiềm năng}
 \paragraph{}
 Kotlin đa nền tảng di động (Kotlin Multiplatform Mobile - KMM) phù hợp nhất để sử dụng trong các tình huống cần có 
-logic nghiệp vụ giống hệt nhau trên cả hai hệ điều hành nhưng vẫn đảm bảo giao diện người dùng gốc nhất quán.
-Do đó, giải pháp này rất hiệu quả đối với các tổ chức ưu tiên hiệu suất gốc và khả năng áp dụng vào các nền tảng cụ thể.
+logic nghiệp vụ giống hệt nhau trên cả hai hệ điều hành nhưng vẫn đảm bảo giao diện người dùng nhất quán.
+Do đó, giải pháp này rất hiệu quả đối với các tổ chức ưu tiên hiệu năng native và khả năng áp dụng vào các nền tảng cụ thể.
 \paragraph{Ứng dụng dành cho doanh nghiệp:}
 Phù hợp nhất với các ứng dụng nghiệp vụ mở rộng cho iPhone cũng như tất cả các nghiệp vụ lớn khác, 
 bởi vì logic nghiệp vụ chỉ cần viết một lần và giao diện người dùng (UI) có thể được thiết kế giống 
@@ -39,9 +39,9 @@ nhau bằng cách sử dụng các tiện ích dành cho cả iPhone và Android
 đồng thời tận dụng những yếu tố đồ họa tốt nhất từ cả hai.
 Ví dụ: các ứng dụng yêu cầu xử lý dữ liệu, làm việc hiệu quả hoặc các quy trình nghiệp vụ cụ thể.
 \paragraph{Ứng dụng công nghệ tài chính và ngân hàng:}
-Để được tích hợp vào quy trình phát triển, cùng với các ứng dụng khác, một ứng dụng tài chính có thể cần có hiệu suất cao, 
+Để được tích hợp vào quy trình phát triển, cùng với các ứng dụng khác, một ứng dụng tài chính có thể cần có hiệu năng cao, 
 bảo mật tốt và được kết nối chặt chẽ với các yếu tố cụ thể của nền tảng, ví dụ như nhận dạng sinh trắc học hoặc lưu trữ được bảo vệ. 
-Đối với lĩnh vực này, KMM phù hợp với hiệu suất ở cấp độ nền tảng và khả năng sử dụng trực tiếp Native API.
+Đối với lĩnh vực này, KMM phù hợp với hiệu năng ở cấp độ nền tảng và khả năng sử dụng trực tiếp Native API.
 \paragraph{Ứng dụng có Logic Nghiệp vụ Phức tạp:}
 Các ứng dụng có tính toán phức tạp, xử lý dữ liệu
 hoặc triển khai kiến thức, kỹ năng hoặc mô hình cụ thể (chăm sóc sức khỏe, hậu cần)
@@ -51,7 +51,7 @@ các thuộc tính của nền tảng khác, đồng thời tránh được bấ
 KMM được thiết kế để triển khai theo từng bước, lý tưởng cho các doanh nghiệp có ứng dụng cũ muốn chuyển sang đa nền tảng. 
 KMM có thể được triển khai dần dần bởi các nhà phát triển, chia sẻ logic mới cho các tính năng cải tiến mới, đồng thời duy trì mã ứng dụng gốc hiện có.
 \paragraph{}
-Điểm hiệu quả của KMM là khi cần hiệu suất và giao diện giống như native, nhưng lại không hiệu quả trong các ứng dụng có giao diện người dùng rất nặng, 
+Điểm hiệu quả của KMM là khi cần hiệu năng và giao diện giống như native, nhưng lại không hiệu quả trong các ứng dụng có giao diện người dùng rất nặng, 
 ưu tiên giao diện người dùng hoặc thường xuyên thay đổi, nơi mà việc phát triển đa nền tảng hoàn toàn là lý tưởng, chẳng hạn như trong React Native hoặc Flutter.
 \subsection{Các trường hợp sử dụng Flutter}
 \paragraph{}
@@ -69,11 +69,11 @@ thế nên đây là lựa chọn tốt hơn cho các công ty khởi nghiệp h
 Nó cũng rất phù hợp để xây dựng các MJP chuyên biệt nhằm kiểm tra nhu cầu thị trường.
 \paragraph{Ứng dụng Truyền thông và Giải trí:}
 Bất kỳ ứng dụng nào cần được làm mới liên tục, tạo hoạt ảnh hoặc hoạt động trên nhiều nền tảng như phát trực tuyến video hoặc trò chơi đều cần công cụ kết xuất Flutter. 
-Để minh họa điều này, chúng ta có ví dụ thực tế về việc Alibaba đã tận dụng thành công Flutter để xây dựng ứng dụng hoạt động trên nhiều nền tảng với hiệu suất tuyệt vời.
+Để minh họa điều này, chúng ta có ví dụ thực tế về việc Alibaba đã tận dụng thành công Flutter để xây dựng ứng dụng hoạt động trên nhiều nền tảng với hiệu năng tuyệt vời.
 \paragraph{IoT và Hệ thống nhúng:}
 Nhờ những cập nhật gần đây, bao gồm hỗ trợ Web, Desktop, và giờ đây là cả IoT, Flutter đang dần trở thành một nền tảng được ưa chuộng. Khả năng lập trình
-trang web để chạy trên mọi nền tảng mà vẫn mang lại hiệu suất ấn tượng và tuân thủ
+trang web để chạy trên mọi nền tảng mà vẫn mang lại hiệu năng ấn tượng và tuân thủ
 cùng một mô hình là một trong những lý do tại sao nền tảng này phù hợp với trường hợp sử dụng này.
 \paragraph{}
 Đó là lý do tại sao nếu dự án có thể được phát triển chỉ bằng các thành phần UI và yêu cầu chu kỳ triển khai ứng dụng nhanh chóng, Flutter sẽ hiệu quả hơn; 
-trong khi KMM sẽ hiệu quả hơn nếu cần tích hợp sâu với các tính năng dành riêng cho nền tảng và tối ưu hóa hiệu suất dành riêng cho nền tảng.
+trong khi KMM sẽ hiệu quả hơn nếu cần tích hợp sâu với các tính năng dành riêng cho nền tảng và tối ưu hóa hiệu năng dành riêng cho nền tảng.
