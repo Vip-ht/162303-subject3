@@ -17,7 +17,7 @@ mức sử dụng bộ nhớ và tốc độ thực thi của React Native, Flut
 \paragraph{}
 React Native giao tiếp với các module native thông qua một cầu nối (bridge) bằng JavaScript.
 Điều này cho phép chúng ta phát triển cho các nền tảng khác nhau nhưng lại 
-nảy sinh các điểm nghẽn về hiệu năng, đặc biệt là khi hoạt ảnh hoặc việc tính toán quá nặng.
+nảy sinh các điểm nghẽn về hiệu năng, đặc biệt là khi animation hoặc việc tính toán quá nặng.
 \paragraph{}
 {\large \textbf{Rendering a List}}
 \begin{minted}[frame=lines, framesep=2mm, baselinestretch=1.2, fontsize=\footnotesize, linenos]{javascript}
@@ -37,9 +37,9 @@ const App = () => (
 export default App;
 \end{minted}
 \paragraph{}
-\textbf{Ưu điểm:}Dễ dàng triển khai và tận dụng hệ sinh thái JavaScript.
+\textbf{Ưu điểm:} Dễ dàng triển khai và tận dụng hệ sinh thái JavaScript.
 \paragraph{}
-\textbf{Nhược điểm:}Hiệu năng bị giảm sút đối với các danh sách lớn do sự phụ thuộc vào cầu nối JavaScript-Native.
+\textbf{Nhược điểm:} Hiệu năng bị giảm sút đối với các danh sách lớn do sự phụ thuộc vào cầu nối JavaScript-Native.
 \subsection{Kotlin Multiplatform}
 \paragraph{}
 Nền tảng Kotlin cung cấp khả năng chia sẻ logic nghiệp vụ trên các platform
@@ -241,7 +241,6 @@ thể hoặc làm việc với thư viện được định nghĩa riêng cho n�
 \textbf{Hot Reload: }Cho phép thay đổi UI một cách nhanh chóng và dễ dàng.
 \paragraph{}
 \textbf{Code Reusability: }Cao, với một codebase duy nhất cho cả iOS và Android. 
-(tạm thời chưa thể dịch, dịch bừa)
 \paragraph{}
 \textbf{Ecosystem: }Phát triển nhanh với nhiều package có sẵn.
 \paragraph{}
@@ -370,7 +369,7 @@ lập trình viên tổ chức ứng dụng như một cấu trúc cây phân c�
 gồm các component độc lập có khả năng tái sử dụng. Cách tiếp cận
 này giúp cải thiện tính module hóa, đồng thời làm cho mã nguồn
 trở nên mạch lạc và dễ bảo trì hơn. Ngoài ra, tính năng hot reload
-của Flutter cho phép các lập trình viên nhanh chóng iterate trên UI,
+của Flutter cho phép các lập trình viên nhanh chóng cập nhật UI,
 nhờ đó kiểm tra và tinh chỉnh các sửa đổi UI mà không cần phải khởi
 động lại app. Hơn nữa, framework này cung cấp sẵn hàng loạt widget
 và công cụ có thể dùng ngay lập tức. Điều này giúp hạn chế việc phải
